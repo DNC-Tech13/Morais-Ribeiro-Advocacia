@@ -1,0 +1,34 @@
+@use "./var" as *;
+
+// TYPOGRAPHY
+@mixin TituloXL {
+  font-size: $font-size-1;
+  font-weight: 700;
+  line-height: 1;
+}
+@mixin TituloX {
+  font-size: $font-size-2;
+  font-weight: 300;
+  line-height: 1.5;
+}
+@mixin TituloL {
+  font-size: $font-size-3;
+  font-weight: 700;
+  line-height: 1.5;
+}
+@mixin TituloS {
+  font-size: $font-size-4;
+  font-weight: 700;
+  line-height: 1.5;
+}
+@mixin BodyR {
+  font-size: $font-size-5;
+  font-weight: 400;
+  line-height: 1.5;
+}
+@mixin BodyB {
+  font-size: $font-size-5;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
