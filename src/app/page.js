@@ -2,10 +2,13 @@
 import Banner from "@/components/banner/banner";
 import "./page.scss";
 import ImgCarousel from "@/components/carousel/banner-carousel";
-
+import Header from "@/components/header/header";
 export default function Home() {
   return (
-    <main>
+    <main className={styles.main}>
+     <header>
+        <Header/>
+      </header>
       <Banner bannerImg={"/images/banners/home.svg"} type={"full"}>
         <ImgCarousel />
         <div className="home-content">
