@@ -72,7 +72,7 @@
     justify-content: center;
     align-items: center; /* Cor de fundo do cabeçalho e rodapé */
     border-bottom: none; /* Remove a borda inferior do cabeçalho e rodapé */
-    margin-left: 18px;
+    margin-left: 0px;
 }
 
 .close-button{
@@ -80,7 +80,7 @@
     border: none;
     cursor: pointer;
     position: absolute;
-    margin-right: -300px;
+    margin-right: -90%;
     margin-bottom: 80px;
 }
 .modal-body {
@@ -134,5 +134,15 @@
         margin-left: 35px;
     }
     
+}
+
+.fade{
+   opacity: 50; 
+   transition: opacity 0.3s linear;
+}
+
+
+.fade.show {
+    opacity: 1;
 }
 

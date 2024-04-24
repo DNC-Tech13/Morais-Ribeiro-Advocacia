@@ -59,6 +59,7 @@ const Header = () => {
                                 centered
                                 dialogClassName='modal-fullscreen'
                                 size="fullscreen"
+                                className={`fade ${showModal ? 'show' : ''}`}
                             >
                                 <Modal.Header closeButton>
                                     <Modal.Title><img src='logo.svg' className='navbar__logo' /></Modal.Title>
