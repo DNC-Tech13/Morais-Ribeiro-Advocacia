@@ -32,3 +32,30 @@
   line-height: 1.5;
 }
 
+
+@mixin container-Mobile{
+  width: 100%;
+  max-width: 93.75%;
+  height: 100%;
+  margin: 0 auto;
+}
+@mixin container-Tablet{
+  max-width: 92.7083333%;
+  height: 100%;
+  margin: 0 auto;
+}
+@mixin container-Desktop{
+  max-width: 88.8888889%;
+  height: 100%;
+  margin: 0 auto;
+}
+@mixin queryTablet {
+  @media (min-width: 712px) {
+    @content;
+  }
+}
+@mixin queryDesktop {
+  @media (min-width: 1100px) {
+    @content;
+  }
+}
