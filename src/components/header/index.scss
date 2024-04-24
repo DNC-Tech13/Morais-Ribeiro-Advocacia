@@ -124,6 +124,10 @@
 
 
     }
+    a{
+        text-decoration: none;
+        color: white;
+    }
     h1{
         font-size: 20px;
         margin-bottom: 50px;
@@ -136,13 +140,44 @@
     
 }
 
-.fade{
-   opacity: 50; 
-   transition: opacity 0.3s linear;
-}
+.fade {
+    opacity: 0.5; /* Define a opacidade como 50% */
+    transition: opacity 0.3s linear;
+ }
+ 
+ .fade.show {
+     opacity: 1; /* Define a opacidade como 100% ao mostrar */
+ }
+ 
 
+@media (min-width: 768px) and (max-width: 1250px) {
+    .navbar {
+        display: flex;
+        text-align: center;
+        flex-direction: row-reverse;
+        justify-content: center; // Centraliza os elementos
+        height: auto; // Ajusta a altura conforme o conteúdo
+        &__container {
+            position: absolute;
+            left: 5%; // Distância da borda esquerda
+            margin-right: 0; // Remove a margem da direita
+            background-image: none; // Remove o background-image
+        }
+    
+        &__logo {
+            margin-left: 0%;
+        }
+    }
+    .modal-header{
+        background-color: $preto-logo;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; /* Cor de fundo do cabeçalho e rodapé */
+        border-bottom: none; /* Remove a borda inferior do cabeçalho e rodapé */
+        margin-left: 0%;
+    }
 
-.fade.show {
-    opacity: 1;
+    
 }
 

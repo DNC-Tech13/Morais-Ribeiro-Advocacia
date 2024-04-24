@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './index.scss';
 import Link from 'next/link';
-import { Modal, Button } from 'react-bootstrap'; // Importe os componentes de modal e botão do Bootstrap
+import { Modal} from 'react-bootstrap'; // Importe os componentes de modal e botão do Bootstrap
 
 const Header = () => {
     // Estado para controlar se o dispositivo é móvel
@@ -12,7 +12,7 @@ const Header = () => {
     useEffect(() => {
         // Função para verificar se o dispositivo é móvel
         const checkIsMobile = () => {
-            const mediaQuery = window.matchMedia('(max-width:768px');
+            const mediaQuery = window.matchMedia('(max-width:1250px)');
             setIsMobile(mediaQuery.matches);
         };
 
@@ -81,7 +81,7 @@ const Header = () => {
                                 <Modal.Footer>
                                     <h1>Contatos</h1>
                                     <div>
-                                        <div className='navbar__footerMenu'><img src='whatsappIcon.svg'/><h4>Telefone: (12) 99160-4267</h4></div>
+                                        <div className='navbar__footerMenu'><a href="https://wa.me/5512991604267?text="><img src='whatsappIcon.svg'/><h4>Telefone: (12) 99160-4267</h4></a></div>
                                         <div className='navbar__footerMenu'><img src='emailIcon.svg'/><h4>E-mail: moraisribeiroadvjur@gmail.com</h4></div>
                                     </div>                                    
                                 </Modal.Footer>
