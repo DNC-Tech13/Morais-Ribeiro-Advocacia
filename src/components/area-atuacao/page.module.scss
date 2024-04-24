@@ -1,0 +1,48 @@
+@use '../../styles/mixin' as mix;
+
+.areaAtuacao h1 {
+    @include mix.TituloXL;
+}
+
+.card h2 {
+    @include mix.TituloL;
+    margin-top: 0;
+}
+
+.card p {
+    @include mix.BodyR;
+}
+
+.card h1 {
+    @include mix.TituloXL;
+}
+
+.areaAtuacao h1 {
+    margin-bottom: 60px;
+}
+
+.cardbox {
+    display: flex;
+    gap: 15px;
+    background: linear-gradient(135deg, #FFFFFF, #F4F7F5);
+    width: 600px;
+    height: 300px;
+}
+
+.cardImagem {
+    margin-top: 15px;
+}
+
+.cardTexto h2{
+    margin-top: 30px;
+}
+
+.cardTexto button {
+    border: none;
+    background: none;
+}
+
+.imgWhatsapp {
+    display: flex;
+    justify-content: flex-end;
+}
