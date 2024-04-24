@@ -5,7 +5,7 @@ import ImgCarousel from "@/components/carousel/banner-carousel";
 import Header from "@/components/header/header";
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main>
      <header>
         <Header/>
       </header>
