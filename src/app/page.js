@@ -1,22 +1,20 @@
-'use client';
-import Image from "next/image";
-import styles from "./page.module.scss";
-import { Button, Card } from "react-bootstrap";
+"use client";
+import Banner from "@/components/banner/banner";
+import "./page.scss";
+import ImgCarousel from "@/components/carousel/banner-carousel";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
+    <main>
+      <Banner bannerImg={"/images/banners/home.svg"} type={"full"}>
+        <ImgCarousel />
+        <div className="home-content">
+          <h1>
+            Na <span>Morais & Ribeiro</span>, somos mais do que apenas advogados
+            - somos uma parceria fundada na amizade e no profissionalismo
+          </h1>
+        </div>
+      </Banner>
     </main>
   );
 }
