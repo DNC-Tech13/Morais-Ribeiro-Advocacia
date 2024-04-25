@@ -19,12 +19,12 @@
     font-size: 30px;
   }
   h3 {
-    @include mix.TituloXL;
+    @include mix.TituloL;
     text-transform: capitalize;
   }
   p,
   h4 {
-    @include mix.TituloS;
+    @include mix.BodyR;
   }
   h4 {
     font-weight: 700;
@@ -38,6 +38,18 @@
       border-bottom: none;
       max-height: 250px;
     }
+    ul li {
+      list-style-type: disc;
+      font-size: 30px;
+    }
+    h3 {
+      @include mix.TituloXL;
+      text-transform: capitalize;
+    }  
+    p,
+  h4 {
+    @include mix.TituloS;
+  }
   }
   .item-lista-wrap.esquerda {
     flex-direction: row;
