@@ -1,0 +1,57 @@
+@use '@/styles/_var.scss' as *;
+@use '@/styles/_mixin.scss' as mix;
+
+.banner_missao-content-wrapper{
+  width: 100%;
+  color: $branco-suave;    
+  span{
+    @include mix.TituloL;    
+  }
+  h1{
+    @include mix.TituloXL;
+  }
+  h2{
+    @include mix.TituloX;
+  }
+}
+.quem_somos-sect{
+  background-color: $profundo;
+}
+.quem_somos-container{
+  @include mix.container-Mobile;
+  padding: 120px 0;
+  color: $branco-suave;  
+  display: flex;
+  flex-direction: column;
+  row-gap: 48px;
+  h2{
+    @include mix.TituloXL;    
+  }
+  p{
+    @include mix.TituloS;
+  }
+}
+
+.missao-sect{
+  background-color: $branco-suave;
+}
+.missao-container{
+  @include mix.container-Mobile;
+  padding: 120px 0;
+  color: $cinza-escuro;
+  display: flex;
+  flex-direction: column;
+  row-gap: 48px;
+}
+
+@include mix.queryTablet{
+  .quem_somos-container{
+    @include mix.container-Tablet;
+  }
+}
+
+@include mix.queryDesktop{
+  .quem_somos-container{
+    @include mix.container-Desktop;
+  }
+}
