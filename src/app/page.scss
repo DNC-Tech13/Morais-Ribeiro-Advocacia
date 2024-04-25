@@ -1,0 +1,51 @@
+@use "@/styles/_mixin.scss" as mix;
+@use "@/styles/_var.scss" as *;
+
+%wrap {
+  height: 100%;
+  width: 100%;
+  max-width: 420px;
+  max-height: 370px;
+}
+
+.home-content {
+  border-top: 2px solid $dourado-escuro;
+  padding-top: 24px;
+  h1 {
+    font-size: 22px;
+    line-height: 1.5;
+    color: $branco-suave;
+    font-weight: 300;
+    @extend %wrap;
+    span {
+      font-weight: 700;
+    }
+  }
+}
+@include mix.queryTablet {
+  %wrap{
+    max-width: 640px;
+    max-height: 590px;
+  }
+  .home-content {
+    h1 {
+      @include mix.TituloX;
+      span{
+        @include mix.TituloXL;
+      }
+    }
+  }
+}
+@include mix.queryDesktop {
+  %wrap{
+    max-width: 636px;
+    max-height: 590px;
+  }
+  .home-content {
+    max-width: 600px;
+    max-height: 590px;
+    h1 {
+      @include mix.TituloX;
+    }
+  }
+}

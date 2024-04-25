@@ -9,13 +9,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Barlow", sans-serif;
 }
 body,
 html {
   overflow-x: hidden;
 }
 html{
-  font-family: "Barlow", sans-serif;
+  font-size: 62.5%;
 }
 body {
   height: 100vh;
