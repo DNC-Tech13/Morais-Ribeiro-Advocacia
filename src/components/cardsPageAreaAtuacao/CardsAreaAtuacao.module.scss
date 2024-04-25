@@ -1,0 +1,57 @@
+@use '../../src/styles/_var.scss' as *;
+
+.box {
+    width: 260px;
+    height: 260px;
+    margin: 25px;
+    position: relative;
+    border-top: 6px solid $dourado-escuro;
+    border-right: 6px solid $dourado-escuro;
+    
+    a {
+        position: absolute;
+        bottom: 10px;
+        left: 12px;
+        text-align: left;
+        margin: 0;
+        text-transform: uppercase;
+        color: $branco-suave;
+        font-weight:500;
+        font-size: $font-size-3;
+    }
+
+    img {
+        width: 254px;
+        height: 254px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .box {
+        width: 140px;
+        height: 140px;
+        margin: 10px;
+        position: relative;
+        border-top: 3px solid $dourado-escuro;
+        border-right: 3px solid $dourado-escuro;
+        
+        a {
+            position: absolute;
+            bottom: 10px;
+            left: 7px;
+            text-align: left;
+            margin: 0;
+            text-transform: uppercase;
+            color: $branco-suave;
+            font-weight:500;
+            font-size: $font-size-5;
+        }
+    
+        img {
+            width: 137px;
+            height: 137px;
+        }
+    }
+
+}
