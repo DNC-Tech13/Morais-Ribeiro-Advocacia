@@ -12,9 +12,9 @@ function cardsAreaAtuacao() {
         {areaAtuacao.map((area, i) => {
           return (
             <div className={styles.box}>
-            <img src={`./Public/areas_atuacao_back${i + 1}.png`} />
-            <a href={`area/${i + 1}`}>{area}</a>
-        </div>
+              <img src={`./public/images/area_atuacao/back${i + 1}.png`} />
+              <a href={`area/${i + 1}`}>{area}</a>
+            </div>
           )
         })}
       </div>
