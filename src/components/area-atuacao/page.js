@@ -108,7 +108,7 @@ export default function AreaAtuacao() {
               <div className='cardTexto'>
                 <h1>Conheça mais dos nossas áreas de atuação</h1>
                 <div className="d-flex justify-content-end">
-                  <button>
+                  <button className="botao">
                     <Image src={NextPage} alt="Next Page image"></Image>
                   </button>
                 </div>

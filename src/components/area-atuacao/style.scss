@@ -2,18 +2,20 @@
 
 .areaAtuacao h1 {
     @include mix.TituloXL;
+    margin-top: 120px;
+    margin-left: 150px;
 }
 
-.card h2 {
+.cardbox h2 {
     @include mix.TituloL;
     margin-top: 0;
 }
 
-.card p {
+.cardbox p {
     @include mix.BodyR;
 }
 
-.card h1 {
+.cardbox h1, h2 {
     @include mix.TituloXL;
 }
 
@@ -33,7 +35,7 @@
     margin-top: 15px;
 }
 
-.cardTexto h2{
+.cardTexto h1, h2{
     margin-top: 30px;
 }
 
@@ -42,7 +44,40 @@
     background: none;
 }
 
+.botao {
+    margin-top: 20px;
+}
+
 .imgWhatsapp {
     display: flex;
     justify-content: flex-end;
+}
+
+@media screen and (max-width:700px) {
+    .cardbox {
+        max-width: 450px;
+    }
+
+    .cardTexto h2 {
+        @include mix.TituloS;
+    }
+
+    .cardTexto p {
+        @include mix.BodyR;
+    }
+
+    .cardTexto h1 {
+        text-decoration: dashed;
+        @include mix.TituloL;
+    }
+}
+
+@media screen and (max-width:468px) {
+    .areaAtuacao h1 {
+        margin: 50px;
+    }
+
+    .cardbox {
+        max-width: 300px;
+    }
 }
