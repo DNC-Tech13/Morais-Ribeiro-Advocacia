@@ -1,0 +1,80 @@
+@use "@/styles/_var.scss" as *;
+@use "@/styles/_mixin.scss" as mix;
+
+.banner_missao-content-wrapper {
+  width: 100%;
+  color: $branco-suave;
+  span {
+    @include mix.BodyB;
+  }
+  h1 {
+    @include mix.TituloL;
+  }
+  h2 {
+    @include mix.BodyR;
+    font-weight: 300;
+  }
+}
+.quem_somos-sect {
+  background-color: $profundo;
+}
+.quem_somos-container {
+  @include mix.container-Mobile;
+  padding: 60px 0;
+  color: $branco-suave;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  h2 {
+    @include mix.TituloX;
+    font-weight: 700;
+  }
+  p {
+    @include mix.BodyR;
+  }
+}
+
+.missao-sect {
+  background-color: $branco-suave;
+}
+.missao-container {
+  @include mix.container-Mobile;
+  padding: 60px 0;
+  color: $cinza-escuro;
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+
+@include mix.queryTablet {
+  .banner_missao-content-wrapper {
+    span {
+      @include mix.TituloL;
+    }
+    h1 {
+      @include mix.TituloXL;
+    }
+    h2 {
+      @include mix.TituloX;
+    }
+  }
+  .quem_somos-container {
+    @include mix.container-Tablet;
+    padding: 120px 0;
+    h2 {
+      @include mix.TituloXL;
+    }
+  }
+  .missao-container {
+    @include mix.container-Tablet;
+    padding: 120px 0;
+    color: $cinza-escuro;
+    row-gap: 48px;
+  }
+}
+
+@include mix.queryDesktop {
+  .quem_somos-container {
+    @include mix.container-Desktop;
+  }
+}

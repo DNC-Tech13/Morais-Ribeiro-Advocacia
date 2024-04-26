@@ -14,12 +14,12 @@
 }
 .hero-sect-full {
   @extend %backgroundRender;
-  height: 100vh;
+  height: 85.3515625vh;
   width: 100%;
 }
 .hero-sect-half {
   @extend %backgroundRender;
-  height: 50vh;
+  height: 30vh;
   width: 100%;
 }
 @include mix.queryTablet {
@@ -28,6 +28,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .hero-sect-half {
+    height: 50vh;
   }
 }
 @include mix.queryDesktop {
