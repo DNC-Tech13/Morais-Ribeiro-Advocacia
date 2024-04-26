@@ -1,0 +1,108 @@
+@use "../../styles/globals" as *;
+.footer{
+    display: flex;
+    height: 200px;
+    background-color: black;
+    font-family: Barlow;
+
+    img{
+        margin-left: 5px;
+    }
+
+    &__container{
+        display: flex;
+        color: white;
+        margin-left: 5px;
+        gap: 100px;
+
+
+        .rectangle {
+            margin-top: 25px;
+            margin-bottom: 25px;
+            height: 150px;
+            width: 2px;
+            background-color: white;
+        }
+
+        h4{
+            font-size: 16px;
+            
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+
+    }
+}
+
+@media screen and (max-width: 768px){
+    .footer{
+        
+        height: 100px;
+        
+        img{
+            display: none;
+        }
+
+        &__container{
+            display: flex;
+            color: white;
+            margin-left: 5px;
+            gap: 20px;
+
+            .rectangle {
+                margin-top: 5px;
+                margin-bottom: 5px;
+                height: 90px;
+                width: 2px;
+                background-color: white;
+            }
+
+            p{
+                font-size: 10px;
+            }
+            h4{
+                font-size: 8px;
+                
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1050px) {
+    .footer{
+        justify-content: space-around;
+        height: 150px;
+        
+        &__logo{
+            width: 50%;
+        }
+
+        &__container{
+            display: flex;
+            color: white;
+            margin-left: 5px;
+            gap: 20px;
+
+            .rectangle {
+                margin-top: 15px;
+                margin-bottom: 15px;
+                height: 120px;
+                width: 2px;
+                background-color: white;
+            }
+            img{
+
+            }
+            p{
+                font-size: 8px;
+            }
+            h4{
+                font-size: 8px;
+                
+            }
+        }
+    }    
+}   
