@@ -8,23 +8,23 @@ import LawBook from "../../imagens/Law-Book.svg";
 import PolicyDocument from "../../imagens/Policy-Document.svg";
 import NextPage from "../../imagens/Next-Page.svg";
 import Whatsapp from "../../imagens/whatsapp.svg";
-import styles from "./page.module.scss";
+import './style.scss'
 
 export default function AreaAtuacao() {
   return (
     <div>
-      <div className={styles.areaAtuacao}>
+      <div className='areaAtuacao'>
         <h1>Principais Áreas de Atuação</h1>
       </div>
 
       <Container>
         <Row>
           <Col xs={12} md={10} xl={6}>
-            <div className={styles.cardbox}>
-              <div className={styles.cardImagem}>
+            <div className='cardbox'>
+              <div className='cardImagem'>
                 <Image src={Auction} alt="Auction image"></Image>
               </div>
-              <div className={styles.cardTexto}>
+              <div className='cardTexto'>
                 <h2>DIREITO DO CONSUMIDOR</h2>
                 <p>
                   É o ramo do direito que trata das relações de consumo, visando
@@ -36,11 +36,11 @@ export default function AreaAtuacao() {
           </Col>
 
           <Col xs={12} md={10} xl={6}>
-            <div className={styles.cardbox}>
-              <div className={styles.cardImagem}>
+            <div className='cardbox'>
+              <div className='cardImagem'>
                 <Image src={Scales} alt="Scales image"></Image>
               </div>
-              <div className={styles.cardTexto}>
+              <div className='cardTexto'>
                 <h2>DIREITO TRABALHISTA</h2>
                 <p>
                   Protege os direitos dos trabalhadores na relação com
@@ -55,11 +55,11 @@ export default function AreaAtuacao() {
 
         <Row>
           <Col xs={12} md={10} xl={6}>
-            <div className={styles.cardbox}>
-              <div className={styles.cardImagem}>
+            <div className='cardbox'>
+              <div className='cardImagem'>
                 <Image src={LawBook} alt="Law Book image"></Image>
               </div>
-              <div className={styles.cardTexto}>
+              <div className='cardTexto'>
                 <h2>DIREITO TRIBUTÁRIO</h2>
                 <p>
                   É o ramo do direito que regula a relação entre o Estado e os
@@ -71,11 +71,11 @@ export default function AreaAtuacao() {
           </Col>
 
           <Col xs={12} md={10} xl={6}>
-            <div className={styles.cardbox}>
-              <div className={styles.cardImagem}>
+            <div className='cardbox'>
+              <div className='cardImagem'>
                 <Image src={Scales} alt="Scales image"></Image>
               </div>
-              <div className={styles.cardTexto}>
+              <div className='cardTexto'>
                 <h2>DIREITO CIVIL</h2>
                 <p>
                   É o conjunto de normas que regulam as relações entre as
@@ -88,11 +88,11 @@ export default function AreaAtuacao() {
         </Row>
         <Row>
           <Col xs={12} md={10} xl={6}>
-            <div className={styles.cardbox}>
-              <div className={styles.cardImagem}>
+            <div className='cardbox'>
+              <div className='cardImagem'>
                 <Image src={PolicyDocument} alt="Policy Document image"></Image>
               </div>
-              <div className={styles.cardTexto}>
+              <div className='cardTexto'>
                 <h2>LGPD</h2>
                 <p>
                   Proteção à privacidade dos indivíduos, regulando a coleta,
@@ -104,8 +104,8 @@ export default function AreaAtuacao() {
           </Col>
 
           <Col xs={12} md={10} xl={6}>
-            <div className={styles.cardbox}>
-              <div className={styles.cardTexto}>
+            <div className='cardbox'>
+              <div className='cardTexto'>
                 <h1>Conheça mais dos nossas áreas de atuação</h1>
                 <div className="d-flex justify-content-end">
                   <button>
@@ -117,7 +117,7 @@ export default function AreaAtuacao() {
           </Col>
         </Row>
       </Container>
-      <div className={styles.imgWhatsapp}>
+      <div className='imgWhatsapp'>
         <a href="https://wa.me/5512991604267?text=Quero+conhecer+mais+das+as+%C3%A1reas+de+atua%C3%A7%C3%A3o.">
           <Image src={Whatsapp}></Image>
         </a>

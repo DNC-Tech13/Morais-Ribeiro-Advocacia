@@ -1,6 +1,6 @@
 'use client';
 import Image from "next/image";
-import styles from "./page.module.scss";
+import './page.scss';
 import { Button, Card } from "react-bootstrap";
 import AreaAtuacao from "@/components/area-atuacao/page";
 
