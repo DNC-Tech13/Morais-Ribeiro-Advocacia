@@ -1,11 +1,27 @@
-'use client';
-import './page.scss';
+"use client";
+import Banner from "@/components/banner/banner";
+import "./page.scss";
+import ImgCarousel from "@/components/carousel/banner-carousel";
+import Header from "@/components/header/header";
+import Layout from "@/components/layout/DefaultLayout";
 import AreaAtuacao from "@/components/area-atuacao/page";
-
 export default function Home() {
   return (
-    <main>
-      <AreaAtuacao/>
-    </main>
+    <Layout>
+      <main>
+        <Banner bannerImg={"/images/banners/home.svg"} type={"full"}>
+          <ImgCarousel />
+          <div className="home-content">
+            <h1>
+              Na <span>Morais & Ribeiro</span>, somos mais do que apenas
+              advogados - somos uma parceria fundada na amizade e no
+              profissionalismo
+            </h1>
+          </div>
+        </Banner>
+      <AreaAtuacao />
+      </main>
+    </Layout>
+
   );
 }
