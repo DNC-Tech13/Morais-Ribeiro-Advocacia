@@ -4,6 +4,7 @@ import "./page.scss";
 import ImgCarousel from "@/components/carousel/banner-carousel";
 import Header from "@/components/header/header";
 import Layout from "@/components/layout/DefaultLayout";
+import AreaAtuacao from "@/components/area-atuacao/page";
 export default function Home() {
   return (
     <Layout>
@@ -18,7 +19,9 @@ export default function Home() {
             </h1>
           </div>
         </Banner>
+      <AreaAtuacao />
       </main>
     </Layout>
+
   );
 }
