@@ -9,33 +9,36 @@
     align-items: center;
     background-color: $preto-logo;
     width: 100%;
-    height: 150px;
-    position: fixed; // Fixa o navbar no topo da tela
+    height: 10%;
+    position: fixed; 
 
     &__logo {
-        width: 326px;
+        width: 20%;
     }
 
     &__container {
         display: flex;
         align-items: center;
-        position: relative; // Importante para posicionar o conteúdo interno
-        margin-right: 22px; // Distância da borda direita
+        position: relative;
+        margin-right: 2%; 
         background-image: url("../../../public/elementBarMenu.svg");
-        background-size: cover; // Garante que a imagem cubra todo o container
+        background-size: cover;
     }
 
     &__link {
-        display: flex;
-        gap: 18px;
+        display: inline-flex;
+        gap: 15px;
+        align-items: center;
     }
+
     &__custom {
         text-decoration: none;
         font-family: Barlow;
         color: $branco;
-        font-size: $font-size-4;
-        margin-right: 5px;
+        font-size: 20px;
+        margin-right: 20px;
     }
+
     &__custom:hover {
         color: $dourado-pastel;
         font-size: 23px;
@@ -45,58 +48,72 @@
 
     @media screen and (max-width: 768px) {
         .navbar {
-            justify-content: center; // Centraliza os elementos
-            height: auto; // Ajusta a altura conforme o conteúdo
+            justify-content: center;
+            height: auto;
         }
 
         &__container {
             position: absolute;
-            left: 22px; // Distância da borda esquerda
-            margin-right: 0; // Remove a margem da direita
-            background-image: none; // Remove o background-image
+            left: 22px; 
+            margin-right: 0;
+            background-image: none; 
         }
 
         &__logo {
-            margin-left: 12%;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            width: 250px;
         }
     }
 }
 
-.modal-content{
-    background-color: $preto-logo;
+.modal-content {
+    background-color: $preto-logo !important;
+    color: $branco; //
     display: flex;
 }
+
 .modal-header{
-    background-color: $preto-logo;
+    
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center; /* Cor de fundo do cabeçalho e rodapé */
-    border-bottom: none; /* Remove a borda inferior do cabeçalho e rodapé */
+    align-items: center;
+    border-bottom: none !important;
     margin-left: 0px;
+    
+}
+
+.modal-header img.navbar__logo {
+    position: absolute;
+    left: 0;
+    transform: translateX(-53%);
 }
 
 .close-button{
-    background-color: transparent;
+    background-color: transparent !important;
+    height: 30px;
     border: none;
     cursor: pointer;
     position: absolute;
-    margin-right: -90%;
-    margin-bottom: 80px;
+    right: 10px;
+    top: 10px;
+    
 }
 .modal-body {
     display: flex;
-    flex-direction: column; /* Organiza os links em coluna */
-    align-items: center; /* Centraliza os links horizontalmente */
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 25%;
 }
 
-/* Estilo para os links dentro do modal */
+
 .modal-body a {
     text-decoration: none;
     font-family: Barlow;
     color: $branco;
     font-size: $font-size-4;
-    margin-bottom: 10px; /* Espaçamento entre os links */
+    margin-bottom: 10px; 
 }
 
 .modal-body a:hover {
@@ -104,14 +121,14 @@
     font-size: 23px;
     transition-duration: 0.2s;
 }
+
 .modal-footer{
     color: white;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
-    border-top: none;
-    
+    border-top: none !important;
     
     &__footerMenu{
         display: flex;
@@ -130,6 +147,7 @@
         color: white;
     }
     h1{
+        margin-left: -5%;
         font-size: 20px;
         margin-bottom: 50px;
     }
@@ -142,43 +160,32 @@
 }
 
 .fade {
-    opacity: 0.5; /* Define a opacidade como 50% */
+    opacity: 0.5; 
     transition: opacity 0.3s linear;
  }
  
  .fade.show {
-     opacity: 1; /* Define a opacidade como 100% ao mostrar */
+     opacity: 1; 
  }
  
 
-@media (min-width: 768px) and (max-width: 1250px) {
+ @media (min-width: 768px) and (max-width: 1250px) {
     .navbar {
         display: flex;
         text-align: center;
-        flex-direction: row-reverse;
-        justify-content: center; // Centraliza os elementos
-        height: auto; // Ajusta a altura conforme o conteúdo
-        &__container {
-            position: absolute;
-            left: 5%; // Distância da borda esquerda
-            margin-right: 0; // Remove a margem da direita
-            background-image: none; // Remove o background-image
+        flex-direction: row;
+        justify-content: center; 
+        height: auto; 
+
+        &__container { 
+            background-image: none; 
         }
     
         &__logo {
-            margin-left: 0%;
+            width: 250px;
+            margin-left: 50%;
+            transform: translateX(-50%);
         }
     }
-    .modal-header{
-        background-color: $preto-logo;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center; /* Cor de fundo do cabeçalho e rodapé */
-        border-bottom: none; /* Remove a borda inferior do cabeçalho e rodapé */
-        margin-left: 0%;
-    }
-
-    
 }
 
