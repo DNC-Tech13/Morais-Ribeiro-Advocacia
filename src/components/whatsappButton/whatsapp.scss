@@ -1,0 +1,15 @@
+
+.imgWhatsapp {
+  position: fixed;
+  bottom:16px;
+  right:16px;
+
+  img{
+  width: 60px;
+  height: 60px;}
+}
+
+
+.imgWhatsapp img:hover {
+  transform: scale(1.3);
+}

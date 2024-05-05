@@ -1,25 +1,24 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Image from "next/image";
 import Auction from "../../imagens/Auction.svg";
 import Scales from "../../imagens/Scales.svg";
 import LawBook from "../../imagens/Law-Book.svg";
 import PolicyDocument from "../../imagens/Policy-Document.svg";
-import NextPage from "../../imagens/Next-Page.svg";
-import Whatsapp from "../../imagens/whatsapp.svg";
+import NextPage from "../../imagens/Next-page.svg";
+import Image from "next/image";
 import './style.scss'
 
 export default function AreaAtuacao() {
   return (
-    <div>
+    <div className="areaAtuacao_container">
       <div className='areaAtuacao'>
-        <h1>Principais Áreas de Atuação</h1>
+        <h2>Principais Áreas de Atuação</h2>
       </div>
 
       <Container>
         <Row>
-          <Col xs={12} md={10} xl={6}>
+          <Col xs={12} md={10} xl={6} className="cardBox_wrapper">
             <div className='cardbox'>
               <div className='cardImagem'>
                 <Image src={Auction} alt="Auction image"></Image>
@@ -35,7 +34,7 @@ export default function AreaAtuacao() {
             </div>
           </Col>
 
-          <Col xs={12} md={10} xl={6}>
+          <Col xs={12} md={10}  xl={6} className="cardBox_wrapper">
             <div className='cardbox'>
               <div className='cardImagem'>
                 <Image src={Scales} alt="Scales image"></Image>
@@ -54,7 +53,7 @@ export default function AreaAtuacao() {
         </Row>
 
         <Row>
-          <Col xs={12} md={10} xl={6}>
+          <Col xs={12} md={10} xl={6} className="cardBox_wrapper">
             <div className='cardbox'>
               <div className='cardImagem'>
                 <Image src={LawBook} alt="Law Book image"></Image>
@@ -70,7 +69,7 @@ export default function AreaAtuacao() {
             </div>
           </Col>
 
-          <Col xs={12} md={10} xl={6}>
+          <Col xs={12} md={10} xl={6} className="cardBox_wrapper">
             <div className='cardbox'>
               <div className='cardImagem'>
                 <Image src={Scales} alt="Scales image"></Image>
@@ -87,7 +86,7 @@ export default function AreaAtuacao() {
           </Col>
         </Row>
         <Row>
-          <Col xs={12} md={10} xl={6}>
+          <Col xs={12} md={10} xl={6} className="cardBox_wrapper">
             <div className='cardbox'>
               <div className='cardImagem'>
                 <Image src={PolicyDocument} alt="Policy Document image"></Image>
@@ -103,7 +102,7 @@ export default function AreaAtuacao() {
             </div>
           </Col>
 
-          <Col xs={12} md={10} xl={6}>
+          <Col xs={12} md={10} xl={6} className="cardBox_wrapper">
             <div className='cardbox'>
               <div className='cardTexto'>
                 <h1>Conheça mais dos nossas áreas de atuação</h1>
@@ -116,12 +115,7 @@ export default function AreaAtuacao() {
             </div>
           </Col>
         </Row>
-      </Container>
-      <div className='imgWhatsapp'>
-        <a href="https://wa.me/5512991604267?text=Quero+conhecer+mais+das+as+%C3%A1reas+de+atua%C3%A7%C3%A3o.">
-          <Image src={Whatsapp}></Image>
-        </a>
-      </div>
+      </Container>      
     </div>
   );
 }
