@@ -16,7 +16,8 @@
   border:none;
   cursor: pointer;
 
-  @include mix.TituloS;
+  
+  @include mix.BodyB;
   font-weight: 700;
   
   &.light{
@@ -27,4 +28,10 @@
     color: $branco-suave;
     background-color: $preto;
   }
+}
+
+@include mix.queryTablet{
+.buttonCustom{
+  @include mix.TituloS;
+}
 }
