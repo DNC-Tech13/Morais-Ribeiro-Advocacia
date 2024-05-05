@@ -14,12 +14,13 @@
 }
 body,
 html {
-  overflow-x: hidden;
+  height: 100%;
 }
 html{
   font-size: 62.5%;
 }
 body {
+  overflow-x: hidden;
   height: 100vh;
 }
 ul li {
