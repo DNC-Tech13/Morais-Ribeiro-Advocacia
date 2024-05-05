@@ -1,0 +1,110 @@
+@use "../../styles/var" as *;
+@use "../../styles/mixin" as *;
+
+.modal-content {
+    background-color: $preto-logo !important;
+    color: $branco; //
+    display: flex;
+}
+
+.modal-header{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: none !important;
+    margin-left: 0px;
+    
+}
+
+.modal-header img.navbar__logo {
+    position: absolute;
+    left: 0;
+    transform: translateX(-53%);
+}
+
+.close-button{
+    background-color: transparent !important;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    
+}
+.modal-body {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 25%;
+}
+
+
+.modal-body a {
+    text-decoration: none;
+    font-family: Barlow;
+    color: $branco;
+    font-size: $font-size-4;
+    margin-bottom: 10px; 
+}
+
+.modal-body a:hover {
+    color: $dourado-pastel;
+    font-size: 23px;
+    transition-duration: 0.2s;
+}
+
+.modal-footer{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    border-top: none !important;
+    
+    &__footerMenu{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    img{
+        position: absolute;
+        transform: translateY(-8px)
+
+
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    h1{
+        margin-left: -5%;
+        font-size: 20px;
+        margin-bottom: 50px;
+    }
+    h4{
+        font-size: 16px;
+        margin-bottom: 30px;
+        margin-left: 35px;
+    }
+    
+}
+
+.fade {
+    opacity: 0.5; 
+    transition: opacity 0.3s linear;
+ }
+ 
+ .fade.show {
+     opacity: 1; 
+ }
+ 
+
+
+
+ 
+
+
