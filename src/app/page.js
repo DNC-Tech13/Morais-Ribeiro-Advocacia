@@ -2,9 +2,9 @@
 import Banner from "@/components/banner/banner";
 import "./page.scss";
 import ImgCarousel from "@/components/carousel/banner-carousel";
-import Header from "@/components/header/header";
 import Layout from "@/components/layout/DefaultLayout";
-import AreaAtuacao from "@/components/area-atuacao/page";
+import AreaAtuacao from "@/components/area-atuacao/AreaAtuacao";
+import ButtonCustomLink from "@/components/button/button";
 export default function Home() {
   return (
     <Layout>
@@ -19,6 +19,19 @@ export default function Home() {
             </h1>
           </div>
         </Banner>
+        <section className={'home-sect2'}>
+          <div className="home-sect2-container">
+            <h3>
+            Confie em nós para representar seus interesses com paixão, profissionalismo e comprometimento. Somos um escritório de atuação full service, 360º, adaptando, entendo e acolhendo cada cliente com sua respectiva demanda.
+            </h3> 
+            <p>Estamos honrados em fazer parte de sua jornada jurídica e ansiosos para trabalhar juntos na busca por soluções eficazes e justas.</p>
+            
+              <ButtonCustomLink variant={'light'} position={'right'}>
+                Entre em contato
+              </ButtonCustomLink>
+            
+          </div>
+        </section>
       <AreaAtuacao />
       </main>
     </Layout>
