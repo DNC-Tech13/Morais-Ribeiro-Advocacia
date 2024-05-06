@@ -7,7 +7,9 @@
   background-color: $branco-suave
 }
 
-
+main{
+  height: 100%;
+}
 .banner_atuacao-content-wrapper {
   width: 100%;
   color: $branco-suave;
@@ -47,6 +49,7 @@
 
 .visualizarArea-sect2{
   @extend %sectionWrap;
+  height: 100%;
 }
 
 .visualizarArea-sect2-container{
