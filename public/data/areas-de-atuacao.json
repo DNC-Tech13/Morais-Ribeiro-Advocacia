@@ -1,0 +1,102 @@
+{
+  "areas": [
+    {
+      "id": 1,
+      "name": "Direito do Consumidor",
+      "thumb": "/images/areas-atuacao-fundo/direito-consumidor-thumb.svg",
+      "banner": "/images/areas-atuacao-fundo/direito-consumidor-banner.svg",
+      "descricao": [
+        {
+          "id": 1.1,
+          "titulo": "O que é",
+          "conteudo": "Direito do consumidor é um conjunto de normas e regras que visam  proteger e garantir os direitos dos consumidores em suas relações de  consumo. Essas normas são estabelecidas para equilibrar as relações  entre consumidores e fornecedores de produtos ou serviços, garantindo  que os consumidores tenham acesso a informações claras, à segurança na  aquisição de produtos e serviços, à liberdade de escolha, à reparação de  danos causados por produtos ou serviços defeituosos, entre outros  direitos. O direito do consumidor também abrange questões como  publicidade enganosa, práticas abusivas, contratos de adesão, e outros  temas relacionados às relações de consumo. No Brasil, o Código de Defesa  do Consumidor (CDC), instituído em 1990, é a principal legislação que  regulamenta e protege os direitos dos consumidores."          
+        },
+        {
+          "id": 1.2,
+          "titulo": "Atividades",
+          "conteudo": [
+            "Representação em processos judiciais e extrajudiciais relacionados ao direito do consumidor, incluindo ações de responsabilidade civil e obrigações decorrentes do Código de Defesa do Consumidor (Lei nº. 8.078/90).",
+            "Atuação em processos administrativos perante órgãos como PROCON, Ministério Público Estadual (MPE), Defensoria Pública Estadual (DPE), Defensoria Pública da União (DPU), Delegacia de Proteção ao Consumidor (DPCA) e Conselhos Profissionais.",
+            "Assessoria e acompanhamento de fiscalizações realizadas por órgãos de defesa do consumidor.",
+            "Revisão de contratos de consumo, incluindo contratos de adesão, para garantir conformidade com a legislação consumerista.",
+            "Recuperação de créditos em atraso, como valores pagos indevidamente ou cobranças abusivas.",
+            "Análise de questões relacionadas à legislação consumerista em específico, como a Lei nº. 8.078/90 e outras normas pertinentes.",
+            "Elaboração e revisão de contratos com fornecedores de bens e serviços, visando proteger os interesses dos consumidores.",
+            "Resolução de conflitos envolvendo programas governamentais de incentivo ao consumo, como o ProUni e o FIES, quando aplicável.",
+            "Prestação de serviços de consultoria, assessoria e elaboração de pareceres jurídicos sobre questões específicas do direito do consumidor, em benefício de consumidores individuais, instituições ou sistemas educacionais."
+          ]
+        }
+      ]
+    },    
+    {
+      "id": 2,
+      "name": "Direito Trabalhista",
+      "thumb": "/images/areas-atuacao-fundo/direito-trabalhista-thumb.svg",
+      "banner": "/images/areas-atuacao-fundo/direito-trabalhista-banner.svg",
+      "descricao": []
+    },
+    {
+      "id": 3,
+      "name": "Direito Tributário",
+      "thumb": "/images/areas-atuacao-fundo/direito-tributario-thumb.svg",
+      "banner": "/images/areas-atuacao-fundo/direito-tributario-banner.svg",
+      "descricao": []
+    },
+    {
+      "id": 4,
+      "name": "Direito Civil",
+      "thumb": "/images/areas-atuacao-fundo/direito-civil-thumb.svg",
+      "banner": "/images/areas-atuacao-fundo/direito-civil-banner.svg",
+      "descricao": []
+    },
+    {
+      "id": 5,
+      "name": "Direito da Família",
+      "thumb": "/images/areas-atuacao-fundo/direito-familia-thumb.svg",
+      "banner": "/images/areas-atuacao-fundo/direito-familia-banner.svg",
+      "descricao": []
+    },
+    {
+      "id": 6,
+      "name": "Direito Empresarial",
+      "thumb": "/images/areas-atuacao-fundo/direito-empresarial-thumb.svg",
+      "banner": "/images/areas-atuacao-fundo/direito-empresarial-banner.svg",
+      "descricao": []
+    },
+    {
+      "id": 7,
+      "name": "Direito Criminal",
+      "thumb": "/images/areas-atuacao-fundo/direito-criminal-thumb.svg",
+      "banner": "/images/areas-atuacao-fundo/direito-criminal-banner.svg",
+      "descricao": []
+    },
+    {
+      "id": 8,
+      "name": "Direito Previdenciário",
+      "thumb": "/images/areas-atuacao-fundo/direito-previdenciario-thumb.svg",
+      "banner": "/images/areas-atuacao-fundo/direito-previdenciario-banner.svg",
+      "descricao": []
+    },
+    {
+      "id": 9,
+      "name": "Direito Internacional",
+      "thumb": "/images/areas-atuacao-fundo/direito-internacional-thumb.svg",
+      "banner": "/images/areas-atuacao-fundo/direito-internacional-banner.svg",
+      "descricao": []
+    },
+    {
+      "id": 10,
+      "name": "Parte Adversa",
+      "thumb": "/images/areas-atuacao-fundo/direito-parte-thumb.svg",
+      "banner": "/images/areas-atuacao-fundo/direito-parte-banner.svg",
+      "descricao": []
+    },
+    {
+      "id": 11,
+      "name": "Proposta de Acordo",
+      "thumb": "/images/areas-atuacao-fundo/direito-acordo-thumb.svg",
+      "banner": "/images/areas-atuacao-fundo/direito-acordo-banner.svg",
+      "descricao": []
+    }
+  ]
+}
