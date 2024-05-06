@@ -52,7 +52,8 @@
   margin: 0 auto;
 }
 @mixin container-Desktop{
-  max-width: 88.8888889%;
+  width: 88.8888889%;
+  max-width: 1440px;
   height: 100%;
   margin: 0 auto;
 }
