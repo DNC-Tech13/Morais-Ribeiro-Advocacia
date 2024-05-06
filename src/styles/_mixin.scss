@@ -5,31 +5,38 @@
   font-size: $font-size-1;
   font-weight: 700;
   line-height: 1;
+    user-select: none;
+  user-select: none;
 }
 @mixin TituloX {
   font-size: $font-size-2;
   font-weight: 300;
   line-height: 1.5;
+    user-select: none;
 }
 @mixin TituloL {
   font-size: $font-size-3;
   font-weight: 700;
   line-height: 1.5;
+    user-select: none;
 }
 @mixin TituloS {
   font-size: $font-size-4;
   font-weight: 400;
   line-height: 1.5;
+    user-select: none;
 }
 @mixin BodyR {
   font-size: $font-size-5;
   font-weight: 400;
   line-height: 1.5;
+    user-select: none;
 }
 @mixin BodyB {
   font-size: $font-size-5;
   font-weight: 700;
   line-height: 1.5;
+    user-select: none;
 }
 
 
@@ -45,7 +52,8 @@
   margin: 0 auto;
 }
 @mixin container-Desktop{
-  max-width: 88.8888889%;
+  width: 88.8888889%;
+  max-width: 1440px;
   height: 100%;
   margin: 0 auto;
 }
