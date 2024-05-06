@@ -1,0 +1,72 @@
+@use '../../styles/mixin' as mix;
+@use '../../styles/var' as *;
+
+.cardWrapper.loaded{
+  display: flex !important;
+}
+.cardWrapper{
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 6px;
+  cursor: pointer;
+  
+  background-size: cover;
+
+  border-right: 6px solid $dourado-escuro;
+  border-top: 6px solid $dourado-escuro;
+
+  width: 150px;
+  height: 150px;
+
+  h3{
+    @include mix.TituloS;
+    font-weight: 700;
+    color: $branco-suave;
+    text-transform: uppercase;
+  }
+
+  &:hover{
+    transform: scale(1.1)
+  }
+}
+
+.cardWrapper.thumb{
+  filter: grayscale(100%);
+  border-color: $cinza-claro;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tremDeCarregamento{
+  width: 50px;
+  height: 50px;  
+  border-top: 5px solid #DDD;
+  border-left: 5px solid #DDD;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+
+}
+
+@include mix.queryTablet{
+  .cardWrapper{
+    width: 300px;
+    height: 300px;
+    padding: 24px;
+
+    h3{
+      @include mix.TituloL;  
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+
+}

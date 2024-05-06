@@ -25,11 +25,6 @@ export default function Home() {
             Confie em nós para representar seus interesses com paixão, profissionalismo e comprometimento. Somos um escritório de atuação full service, 360º, adaptando, entendo e acolhendo cada cliente com sua respectiva demanda.
             </h3> 
             <p>Estamos honrados em fazer parte de sua jornada jurídica e ansiosos para trabalhar juntos na busca por soluções eficazes e justas.</p>
-            
-              <ButtonCustomLink variant={'light'} position={'right'}>
-                Entre em contato
-              </ButtonCustomLink>
-            
           </div>
         </section>
       <AreaAtuacao />

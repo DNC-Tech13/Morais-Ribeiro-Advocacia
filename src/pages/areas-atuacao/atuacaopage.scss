@@ -1,0 +1,116 @@
+@use '../../styles/mixin' as mix;
+@use '../../styles/var' as *;
+
+%sectionWrap {
+  padding: 42px 0;  
+  width: 100%;  
+  background-color: $branco-suave
+}
+
+
+.banner_atuacao-content-wrapper {
+  width: 100%;
+  color: $branco-suave;
+  span {
+    display: block;
+    @include mix.BodyB;
+  }
+  h1 {
+    display: inline;
+    @include mix.TituloL;
+  }
+  h2 {
+    margin-left: 22px;
+    display: inline;
+    @include mix.TituloS;
+    font-style: italic;
+    font-weight: 300;
+  }
+}
+.atuacao-sect2{
+  @extend %sectionWrap;
+}
+
+.atuacao-sect2_container{
+  @include mix.container-Mobile;
+  display: flex;
+  flex-direction: column;
+  row-gap: 42px;
+}
+
+.atuacao-sect2_grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.visualizarArea-sect2{
+  @extend %sectionWrap;
+}
+
+.visualizarArea-sect2-container{
+  @include mix.container-Mobile;
+  display: flex;
+  flex-direction: column;
+  @include mix.BodyR;
+  h2{
+    @include mix.TituloS;
+    font-weight: 700;
+  }
+
+  ul{
+    li{
+      list-style-type: disc;
+    }
+  }
+}
+
+.visualizarArea-sect2-item{
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  margin-bottom: 12px;
+}
+
+
+@include mix.queryTablet{
+  %sectionWrap {
+    padding: 80px 0;  
+  }  
+  .atuacao-sect2_container{
+    @include mix.container-Tablet;
+    row-gap: 60px;
+  }
+  .visualizarArea-sect2-container{
+    @include mix.container-Tablet;
+    row-gap: 60px;
+    @include mix.TituloS;
+  h2{
+    @include mix.TituloL;
+    font-weight: 700;
+  }
+  }
+
+
+  .atuacao-sect2_grid{
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@include mix.queryDesktop{
+  %sectionWrap {
+    padding: 120px 0;  
+  }  
+  .atuacao-sect2_container, .visualizarArea-sect2-container{
+    @include mix.container-Desktop;
+  }
+  .visualizarArea-sect2-container{
+  p,li {@include mix.TituloS;}
+  h2{
+    @include mix.TituloX;
+    font-weight: 700;
+  }
+}
+}
