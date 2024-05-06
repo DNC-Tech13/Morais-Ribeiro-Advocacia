@@ -37,7 +37,7 @@ const Header = () => {
         <header>
             <nav className='navbar'>
                 {/* Logo do Navbar */}
-                <img src='logo.svg' className='navbar__logo' />
+                <img src='/logo.svg' className='navbar__logo' />
 
                 {/* Container para Links */}
                 <div className='navbar__container'>
@@ -75,7 +75,7 @@ const Header = () => {
                                     <Link href="/" className='navbar__custom'>Visão</Link>
                                     <Link href="/" className='navbar__custom'>Áreas de Atuação</Link>
                                     <Link href="/" className='navbar__custom'>Publicações</Link>
-                                    <Link href="/" className='navbar__custom'>Equipe</Link>
+                                    <Link href="/cardEquipe/cardEquipe" className='navbar__custom'>Equipe</Link>
                                     <Link href="/" className='navbar__custom'>Privacidade</Link>
                                 </Modal.Body>
                                 <Modal.Footer>
@@ -96,7 +96,7 @@ const Header = () => {
                             <Link href="/" className='navbar__custom'>Visão</Link>
                             <Link href="/" className='navbar__custom'>Áreas de Atuação</Link>
                             <Link href="/" className='navbar__custom'>Publicações</Link>
-                            <Link href="/" className='navbar__custom'>Equipe</Link>
+                            <Link href="/cardEquipe/cardEquipe" className='navbar__custom'>Equipe</Link>
                             <Link href="/" className='navbar__custom'>Privacidade</Link>
                         </div>
                     )}
