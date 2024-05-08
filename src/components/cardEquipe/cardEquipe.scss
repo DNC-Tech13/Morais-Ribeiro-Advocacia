@@ -1,0 +1,142 @@
+@use '../../styles/mixin' as mix;
+@use '../../styles/var' as *;
+
+.cardEquipe_wrapper{
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    color: $cinza-escuro;
+
+    .cardEquipe_content{
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      width: 100%;
+
+
+      .cardEquipe_content-info{
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+        width: 100%;
+
+
+        h2{
+          @include mix.TituloS;
+          margin-bottom: 0;
+          position:relative;
+          width: 100%;
+          padding-left: 2%;
+          &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background-color: $dourado-pastel;
+            bottom: -2px;
+            left: 0;
+          }
+        }
+        h3{
+          @include mix.BodyB;
+          margin-bottom: 0;
+        }
+        p{
+          font-size: 12px;
+          line-height: 1.5;
+          margin-bottom: 0;
+        }
+      }
+    }
+}
+
+.cardEquipe_contact{
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: center;
+  gap: 8px;
+
+  a{
+    font-size: 12px;
+    line-height: 1.5;
+    img{
+      margin-right: 4px;
+      width: 20px;
+      height: 20px
+    }
+  }
+}
+
+@include mix.queryTablet {
+  .cardEquipe_wrapper{
+    flex-direction: row;
+    gap: 24px;
+    row-gap: 0;
+    justify-content: space-between;
+    
+
+    .cardEquipe_content{
+      gap: 16px;
+      
+      .cardEquipe_content-info{
+        row-gap: 8px;
+
+       
+        h3{
+          @include mix.TituloS;
+          font-weight: 700;
+        }
+        p{
+          @include mix.TituloS;
+        }
+      }
+    }
+
+    .cardEquipe_contact{
+      flex-direction: column;
+      width: 200px;
+
+      a{
+        img{
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}
+
+@include mix.queryDesktop {
+  .cardEquipe_wrapper{
+    gap: 48px;
+
+    .cardEquipe_content{
+      gap: 48px;      
+      .cardEquipe_content-info{
+        row-gap: 32px;       
+        h2{
+          @include mix.TituloX;
+          &::after{            
+            bottom: -6px;
+            left: 0;
+          }
+        } 
+        h3{
+          @include mix.TituloL;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  .cardEquipe_contact{
+    min-width: 250px;
+    width: 100%;
+    max-width: 350px;
+    gap: 16px;
+    a{
+      @include mix.BodyR;
+      img{
+        margin-right: 16px;
+      }
+    }
+  }
+}

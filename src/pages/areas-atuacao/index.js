@@ -38,7 +38,7 @@ export default function AreasAtuacao() {
     };
 
     fetchData();
-  }, []); // Chamar somente uma vez, equivalente a componentDidMount
+  }, []);
 
   return (
     <Layout>
