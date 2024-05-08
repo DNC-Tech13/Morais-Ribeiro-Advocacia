@@ -1,5 +1,4 @@
 'use client' 
-import { Children, useState } from 'react'
 import './banner.scss'
 
  

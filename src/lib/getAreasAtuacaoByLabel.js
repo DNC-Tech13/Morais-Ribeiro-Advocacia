@@ -1,8 +1,12 @@
 import { instance } from "./axiosInterceptor";
 import { reverseSlug } from "./createSlug";
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 export const fetchAreasByLabel = async (areaLabel) => {
-  const dataRef = process.env.AREAS_ATUACAO_REF || '';
+  const dataRef = process.env.AREAS_ATUACAO_REF || '/data/areas-de-atuacao.json';
+  console.log(dataRef)
   try {
     const response = await instance.get(dataRef, {
       cache: {
