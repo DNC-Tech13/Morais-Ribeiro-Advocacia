@@ -1,184 +1,112 @@
 @use "../../styles/var" as *;
 @use "../../styles/mixin" as *;
 
-.navbar {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: $preto-logo;
-    width: 100%;
-    height: 150px;
-    position: fixed; // Fixa o navbar no topo da tela
 
-    &__logo {
-        width: 326px;
+@media screen and (max-width: 711px) {
+    header{
+        height: 53px;
     }
+
+    .navbar {
+        text-decoration: none;
+        justify-content: center;
+        height: auto;
+        background-color: $preto-logo;
+        color: $preto-logo;
+        width: 100%;
+        height: 94px;
+        position: fixed !important;
+        z-index: 9999;
+
+        button{
+            background-color: transparent;
+            border: 0px;
+        }
+    
 
     &__container {
-        display: flex;
-        align-items: center;
-        position: relative; // Importante para posicionar o conteúdo interno
-        margin-right: 22px; // Distância da borda direita
-        background-image: url("../../../public/elementBarMenu.svg");
-        background-size: cover; // Garante que a imagem cubra todo o container
-    }
-
-    &__link {
-        display: flex;
-        gap: 18px;
-    }
-    &__custom {
-        text-decoration: none;
-        font-family: Barlow;
-        color: $branco;
-        font-size: $font-size-4;
-        margin-right: 5px;
-    }
-    &__custom:hover {
-        color: $dourado-pastel;
-        font-size: 23px;
-        transition-duration: 0.2s;
-    }
-    
-
-    @media screen and (max-width: 768px) {
-        .navbar {
-            justify-content: center; // Centraliza os elementos
-            height: auto; // Ajusta a altura conforme o conteúdo
-        }
-
-        &__container {
-            position: absolute;
-            left: 22px; // Distância da borda esquerda
-            margin-right: 0; // Remove a margem da direita
-            background-image: none; // Remove o background-image
-        }
-
-        &__logo {
-            margin-left: 12%;
-        }
-    }
-}
-
-.modal-content{
-    background-color: $preto-logo;
-    display: flex;
-}
-.modal-header{
-    background-color: $preto-logo;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center; /* Cor de fundo do cabeçalho e rodapé */
-    border-bottom: none; /* Remove a borda inferior do cabeçalho e rodapé */
-    margin-left: 0px;
-}
-
-.close-button{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    margin-right: -90%;
-    margin-bottom: 80px;
-}
-.modal-body {
-    display: flex;
-    flex-direction: column; /* Organiza os links em coluna */
-    align-items: center; /* Centraliza os links horizontalmente */
-}
-
-/* Estilo para os links dentro do modal */
-.modal-body a {
-    text-decoration: none;
-    font-family: Barlow;
-    color: $branco;
-    font-size: $font-size-4;
-    margin-bottom: 10px; /* Espaçamento entre os links */
-}
-
-.modal-body a:hover {
-    color: $dourado-pastel;
-    font-size: 23px;
-    transition-duration: 0.2s;
-}
-.modal-footer{
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-    border-top: none;
-    
-    
-    &__footerMenu{
-        display: flex;
-        align-items: center;
-        gap: 15px;
-    }
-    
-    img{
         position: absolute;
-        transform: translateY(-8px)
+        left: 22px;
+        margin-right: 0;
+        background-image: none;
+    }
 
-
+    &__logo {
+        margin: 0 auto;
+        width: 94px;
     }
-    a{
-        text-decoration: none;
-        color: white;
-    }
-    h1{
-        font-size: 20px;
-        margin-bottom: 50px;
-    }
-    h4{
-        font-size: 16px;
-        margin-bottom: 30px;
-        margin-left: 35px;
-    }
-    
+}
 }
 
-.fade {
-    opacity: 0.5; /* Define a opacidade como 50% */
-    transition: opacity 0.3s linear;
- }
- 
- .fade.show {
-     opacity: 1; /* Define a opacidade como 100% ao mostrar */
- }
- 
-
-@media (min-width: 768px) and (max-width: 1250px) {
+@include queryDesktop{
+    header{
+        height: 150px;
+    
     .navbar {
-        display: flex;
-        text-align: center;
-        flex-direction: row-reverse;
-        justify-content: center; // Centraliza os elementos
-        height: auto; // Ajusta a altura conforme o conteúdo
-        &__container {
-            position: absolute;
-            left: 5%; // Distância da borda esquerda
-            margin-right: 0; // Remove a margem da direita
-            background-image: none; // Remove o background-image
-        }
+        margin: 0 ;
+        padding: 0 !important;
+        background-color: $preto-logo;
+        width: 100%;
+        height: 150px;
+        position: fixed !important;
+        z-index: 9999;
+
     
         &__logo {
-            margin-left: 0%;
+            height: 150px;
+        }
+    
+        &__container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 70.2%;
+            background-image: url("../../../public/elementBarMenu.svg");
+        }
+    
+        &__custom {
+            text-decoration: none;
+            font-family: Barlow;
+            color: $branco;
+            font-size: 18px;
+            margin-right: 1.33%;
+        }
+    
+        &__custom:hover {
+            color: $dourado-pastel;
+            font-size: 22px;
+            transition-duration: 0.2s;
         }
     }
-    .modal-header{
-        background-color: $preto-logo;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center; /* Cor de fundo do cabeçalho e rodapé */
-        border-bottom: none; /* Remove a borda inferior do cabeçalho e rodapé */
-        margin-left: 0%;
-    }
-
-    
+}
 }
 
+@include queryTablet{
+    header{
+        height: 81.71px;
+    }
+    Link{
+        text-decoration: none;
+        color: $preto-logo;
+    }
+    .navbar{
+        background-color: $preto-logo;
+        width: 100%;
+        position: fixed !important;
+        z-index: 9999;
+        
+        button{
+            background-color: transparent;
+        }
+        &__logo {
+            height: 81.71px;        
+        }
+        
+
+        &__container{
+            button{
+                background-color: transparent;
+                border: 0px;
+            }
+        }
+    }
+}

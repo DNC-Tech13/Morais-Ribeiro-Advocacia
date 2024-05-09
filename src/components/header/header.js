@@ -1,36 +1,32 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import './index.scss';
 import Link from 'next/link';
-import { Modal} from 'react-bootstrap'; // Importe os componentes de modal e botão do Bootstrap
+import ModalMenu from '../modal menu/modalMenu';
 
-const Header = () => {
-    // Estado para controlar se o dispositivo é móvel
-    const [isMobile, setIsMobile] = useState(false);
-    // Estado para controlar a exibição do modal
-    const [showModal, setShowModal] = useState(false);
+const Header = ({ isMobileProp, showModalProp, handleToggleModalProp, renderLinksProp }) => {
+    const [isMobile, setIsMobile] = useState(isMobileProp);
+    const [showModal, setShowModal] = useState(showModalProp);
+    const [renderLinks, setRenderLinks] = useState(renderLinksProp);
+
+    // Memoiza a função checkIsMobile para evitar demora de  reload
+    const checkIsMobile = useMemo(() => () => {
+        const mediaQuery = window.matchMedia('(max-width:1099px)');
+        setIsMobile(mediaQuery.matches);
+        setRenderLinks(true);
+    }, []);
 
     useEffect(() => {
-        // Função para verificar se o dispositivo é móvel
-        const checkIsMobile = () => {
-            const mediaQuery = window.matchMedia('(max-width:1250px)');
-            setIsMobile(mediaQuery.matches);
-        };
+        checkIsMobile(); // Chamada inicial para definir o estado ao montar o componente
 
-        // Verifica se o dispositivo é móvel ao montar o componente
-        checkIsMobile();
-
-        // Adiciona um listener de resize para atualizar o estado se a janela for redimensionada
         window.addEventListener('resize', checkIsMobile);
 
-        // Remove o listener de resize ao desmontar o componente para evitar vazamentos de memória
         return () => {
             window.removeEventListener('resize', checkIsMobile);
         };
     }, []);
 
-    // Função para alternar a exibição do modal
     const handleToggleModal = () => {
-        setShowModal(!showModal); // Inverte o estado do modal ao clicar no ícone
+        setShowModal(!showModal);
     };
 
     return (
@@ -41,7 +37,6 @@ const Header = () => {
 
                 {/* Container para Links */}
                 <div className='navbar__container'>
-                    {/* Renderização condicional baseada no dispositivo */}
                     {isMobile ? (
                         <>
                             {/* Ícone para abrir o modal */}

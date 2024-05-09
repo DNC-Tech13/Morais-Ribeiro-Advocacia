@@ -3,7 +3,6 @@ import { instance } from "./axiosInterceptor";
 
 export const fetchAreas = async () => {
   const dataRef = process.env.AREAS_ATUACAO_REF || '/data/areas-de-atuacao.json';
-  console.log(dataRef)
   try {
     const response = await instance.get(dataRef, {
       cache: {
