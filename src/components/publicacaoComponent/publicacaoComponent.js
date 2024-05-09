@@ -24,12 +24,12 @@ const PublicacaoComponent = ({ autorInfo, publicacaoInfo }) => {
   
         {/* Integrando PublicacaoCard diretamente */}
         <div className='publicacao__post'>
-          <div className='public__section1'>
+          <div className='public__section'>
             <h1>{titulo}</h1>
             <p>{resumo}</p>
           </div>
-          <div className='public__section2'>
-            <div className='public__section21'>
+          <div className='public__section1'>
+            <div className='public__section2'>
               <a href={continuarLendo}>continuar lendo</a>
               <span>{data}</span>
             </div>
