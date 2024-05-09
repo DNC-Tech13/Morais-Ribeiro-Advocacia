@@ -1,0 +1,97 @@
+@use "../../styles/var" as *;
+@use "../../styles/mixin" as mix;
+
+.navbar__custom.active{
+    color: $dourado-pastel;
+}
+
+.modal-content {
+    background-color: $preto-logo !important;
+    color: $branco; //
+    display: flex;
+}
+
+.modal-header{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: none !important;
+    margin-left: 0px;
+    
+}
+
+.modal-header img.navbar__logo {
+    margin:auto;
+}
+
+
+.modal-body {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 25%;
+}
+
+
+.modal-body a {
+    text-decoration: none;
+    font-family: Barlow;
+    color: $branco;
+    font-size: $font-size-4;
+    margin-bottom: 10px; 
+}
+
+.modal-body a:hover {
+    color: $dourado-pastel;
+    font-size: 23px;
+    transition-duration: 0.2s;
+}
+
+.modal-footer{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    border-top: none !important;    
+    h1{        
+        @include mix.TituloS;
+        margin-bottom: 50px;
+    }
+    
+    &__footerMenu{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        width: 100% !important;
+    }
+    a{
+        display:flex;
+        text-decoration: none;
+        color: white;
+        align-items: center;
+        gap: 16px;
+    }
+    h4{
+        font-size: 16px;
+    }
+    
+}
+
+.fade {
+    opacity: 0.5; 
+    transition: opacity 0.3s linear;
+ }
+ 
+ .fade.show {
+     opacity: 1; 
+ }
+ 
+
+
+
+ 
+
+

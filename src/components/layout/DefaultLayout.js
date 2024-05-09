@@ -7,11 +7,10 @@ import WhatsappButton from "../whatsappButton/whatsappButton";
 export default function Layout({ children }) {
   return (
     <ThemeProvider breakpoints={["xl", "md"]} minBreakpoint="xxs">
-      {/* <header>
+      <header>
         <Header />
-      </header> */}
+      </header>
       {children}
-      <WhatsappButton/>
     </ThemeProvider>
   );
 }

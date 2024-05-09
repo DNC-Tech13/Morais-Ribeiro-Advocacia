@@ -40,7 +40,7 @@ export default function MissaoVisaoValores() {
                 <h2>Advocacia e Consultoria Juridica</h2>
               </div>
             </Banner>
-            <section className="quem_somos-sect">
+            <section className="quem_somos-sect" id="QuemSomos">
             <div className="quem_somos-container">
               <h2>Quem somos</h2>
               <p>
@@ -63,8 +63,8 @@ export default function MissaoVisaoValores() {
               </p>
             </div>
           </section>
-          <section className="missao-sect">
-            <div className="missao-container">
+          <section className="missao-sect" id="Missao">
+            <div className="missao-container" id="Visao">
               {items.map((item, index) => (
                 <ItemLista
                   key={index}
@@ -121,7 +121,7 @@ export default function MissaoVisaoValores() {
             </div>
           </section>
           <section className="missao-sect">
-            <div className="missao-container">
+            <div className="missao-container" id="Visao">
               {items.map((item, index) => (
                 <ItemLista
                   key={index}
