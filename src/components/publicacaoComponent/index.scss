@@ -1,0 +1,80 @@
+@use "../../styles/var" as *;
+@use "../../styles/mixin" as *;
+@use ".././../styles/globals.scss" as *;
+
+
+@include queryDesktop {
+
+    .publicacao__autor h3{
+        font-size: 34px;
+        font-weight: 400;        
+    }
+    .publicacao__autor a{
+        color: $dourado-escuro;
+        text-decoration: none;  
+        font-size: 31px; 
+    }
+    .publicacao__post h1{
+        font-size: 36px;
+    }
+    .publicacao__post p{
+        font-size: $font-size-4;
+    }
+    
+    .public__section2 a{
+        font-size: 26px;
+    }
+
+    .public__section2 span{
+        font-size: 20px;
+        color: $cinza-medio;
+    }
+
+    .public__section21{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.publicacao{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 95%;
+    height: 431px;
+    background-color: $branco-suave;
+    font-family: Bralow;
+    margin-left: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+
+    &__autor{
+        width: 252.44px;
+        height: 431px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 20px;
+       
+        &__link{
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            text-align: center;
+            
+        }
+    }
+
+    &__post{
+        width: 1027.56px;
+        gap: 200px;
+
+        &__section21{
+            display: flex;
+            justify-content: space-between;
+            
+        }
+    }
+    
+}
