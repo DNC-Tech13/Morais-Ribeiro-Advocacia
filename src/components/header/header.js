@@ -8,7 +8,7 @@ const Header = ({ isMobileProp, showModalProp, handleToggleModalProp, renderLink
     const [showModal, setShowModal] = useState(showModalProp);
     const [renderLinks, setRenderLinks] = useState(renderLinksProp);
 
-    // Memoiza a função checkIsMobile para evitar demora de  reload
+    // Memoiza a função checkIsMobile para evitar demora de reload
     const checkIsMobile = useMemo(() => () => {
         const mediaQuery = window.matchMedia('(max-width:1099px)');
         setIsMobile(mediaQuery.matches);
@@ -51,7 +51,7 @@ const Header = ({ isMobileProp, showModalProp, handleToggleModalProp, renderLink
                                 <Link href="/missao-visao-valores" className='navbar__custom'>Missão e valores</Link>
                                 <Link href="/missao-visao-valores" className='navbar__custom'>Visão</Link>
                                 <Link href="/" className='navbar__custom'>Áreas de Atuação</Link>
-                                <Link href="/" className='navbar__custom'>Publicações</Link>
+                                <Link href="/publi" className='navbar__custom'>Publicações</Link>
                                 <Link href="/" className='navbar__custom'>Equipe</Link>
                                 <Link href="/" className='navbar__custom'>Privacidade</Link>
                             </>
