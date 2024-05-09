@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import './index.scss';
 import Link from 'next/link';
-import ModalMenu from '../modal menu/modalMenu';
+import ModalMenu from '../modalMenu/modalMenu';
 
 const Header = ({ isMobileProp, showModalProp, handleToggleModalProp, renderLinksProp }) => {
     const [isMobile, setIsMobile] = useState(isMobileProp);
@@ -26,7 +26,7 @@ const Header = ({ isMobileProp, showModalProp, handleToggleModalProp, renderLink
     }, []);
 
     const handleToggleModal = () => {
-        setShowModal(!showModal);git merge 
+        setShowModal(!showModal);
     };
 
     return (
@@ -37,11 +37,15 @@ const Header = ({ isMobileProp, showModalProp, handleToggleModalProp, renderLink
                 <div className='navbar__container'>
                     {isMobile ? (
                         <>
-                            <button onClick={handleToggleModal}>
+                            {!showModal ? <button onClick={handleToggleModal}>
                                 <img src='mobileMenuIcon.svg' className='navbar__mobile-icon' alt='Mobile Icon' />
+                            </button> : 
+                            <button className="close-button" onClick={handleToggleModal}>
+                                <img src='closeButton.svg'/>
                             </button>
+                            }
                             
-                            {showModal && <ModalMenu handleToggleModal={handleToggleModal} />}
+                            {showModal && <ModalMenu handleToggleModal={handleToggleModal} showModal={showModal}  />}
                         </>
                     ) : (
                         renderLinks && (

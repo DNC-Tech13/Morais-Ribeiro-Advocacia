@@ -4,6 +4,7 @@ import { Modal} from 'react-bootstrap';
 import './index.scss';
 
 const ModalMenu = ({ showModal, handleToggleModal }) => {
+    console.log(showModal)
   return (
     <Modal 
     show={showModal} 
@@ -14,10 +15,7 @@ const ModalMenu = ({ showModal, handleToggleModal }) => {
     className={`fade ${showModal ? 'show' : ''}`}
 >
     <Modal.Header closeButton>
-        <Modal.Title><img src='logo.svg' className='navbar__logo' /></Modal.Title>
-        <button className="close-button" onClick={handleToggleModal}>
-            <img src='closeButton.svg'/>
-        </button>
+        <Modal.Title><img src='logo.svg' className='navbar__logo' /></Modal.Title>       
     </Modal.Header>
     <Modal.Body>
         <Link href="/" className='navbar__custom'>Home</Link>
@@ -31,10 +29,10 @@ const ModalMenu = ({ showModal, handleToggleModal }) => {
     </Modal.Body>
     <Modal.Footer>
         <h1>Contatos</h1>
-        <div>
-            <div className='navbar__footerMenu'><a href="https://wa.me/5512991604267?text="><img src='whatsappIcon.svg'/><h4>Telefone: (12) 99160-4267</h4></a></div>
-            <div className='navbar__footerMenu'><img src='emailIcon.svg'/><h4>E-mail: moraisribeiroadvjur@gmail.com</h4></div>
-        </div>                                    
+            <a href="https://wa.me/5512991604267?text="><img src='whatsappIcon.svg'/><h4>Telefone: (12) 99160-4267</h4></a>
+            <a href='mailto:moraisribeiroadvjur@gmail.com'>
+            <img src='emailIcon.svg'/><h4>E-mail: moraisribeiroadvjur@gmail.com</h4>
+            </a>
     </Modal.Footer>
 </Modal>
   )

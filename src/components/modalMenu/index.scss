@@ -1,5 +1,5 @@
 @use "../../styles/var" as *;
-@use "../../styles/mixin" as *;
+@use "../../styles/mixin" as mix;
 
 .modal-content {
     background-color: $preto-logo !important;
@@ -22,16 +22,7 @@
     margin:auto;
 }
 
-.close-button{
-    background-color: transparent !important;
-    height: 30px;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    
-}
+
 .modal-body {
     display: flex;
     flex-direction: column; 
@@ -60,33 +51,27 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
-    border-top: none !important;
+    border-top: none !important;    
+    h1{        
+        @include mix.TituloS;
+        margin-bottom: 50px;
+    }
     
     &__footerMenu{
         display: flex;
         align-items: center;
         gap: 15px;
-    }
-    
-    img{
-        position: absolute;
-        transform: translateY(-8px)
-
-
+        width: 100% !important;
     }
     a{
+        display:flex;
         text-decoration: none;
         color: white;
-    }
-    h1{
-        margin-left: -5%;
-        font-size: 20px;
-        margin-bottom: 50px;
+        align-items: center;
+        gap: 16px;
     }
     h4{
         font-size: 16px;
-        margin-bottom: 30px;
-        margin-left: 35px;
     }
     
 }

@@ -1,6 +1,16 @@
 @use "../../styles/var" as *;
 @use "../../styles/mixin" as *;
 
+.close-button{
+    background-color: transparent !important;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    position: absolute;    
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
 
 @media screen and (max-width: 711px) {
     header{
@@ -29,6 +39,7 @@
         left: 22px;
         margin-right: 0;
         background-image: none;
+                
     }
 
     &__logo {
@@ -108,5 +119,17 @@
                 border: 0px;
             }
         }
+    }
+
+    .close-button{
+        background-color: transparent !important;
+        height: 30px;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        
     }
 }
