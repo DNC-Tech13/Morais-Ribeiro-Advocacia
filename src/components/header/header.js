@@ -2,11 +2,13 @@ import React, { useEffect, useState, useMemo } from 'react';
 import './index.scss';
 import Link from 'next/link';
 import ModalMenu from '../modalMenu/modalMenu';
+import { rotasApp } from '@/lib/rotasApp/rotasApp';
 
 const Header = ({ isMobileProp, showModalProp, handleToggleModalProp, renderLinksProp }) => {
     const [isMobile, setIsMobile] = useState(isMobileProp);
     const [showModal, setShowModal] = useState(showModalProp);
     const [renderLinks, setRenderLinks] = useState(renderLinksProp);
+    const [path, setPath] = useState('');
 
     // Memoiza a função checkIsMobile para evitar demora de reload
     const checkIsMobile = useMemo(() => () => {
@@ -17,13 +19,22 @@ const Header = ({ isMobileProp, showModalProp, handleToggleModalProp, renderLink
 
     useEffect(() => {
         checkIsMobile(); // Chamada inicial para definir o estado ao montar o componente
-
         window.addEventListener('resize', checkIsMobile);
+        const pathname = window.location.pathname;
+        const anchor = window.location.hash;
+        console.log(anchor)
+        if(anchor){
+        setPath(pathname + anchor);
+        } else {
+            setPath(pathname);
+        }
 
         return () => {
             window.removeEventListener('resize', checkIsMobile);
         };
     }, []);
+
+    console.log(path)
 
     const handleToggleModal = () => {
         setShowModal(!showModal);
@@ -50,14 +61,7 @@ const Header = ({ isMobileProp, showModalProp, handleToggleModalProp, renderLink
                     ) : (
                         renderLinks && (
                             <>
-                                <Link href="/" className='navbar__custom'>Home</Link>
-                                <Link href="/" className='navbar__custom'>Sobre nós</Link>
-                                <Link href="/missao-visao-valores" className='navbar__custom'>Missão e valores</Link>
-                                <Link href="/missao-visao-valores" className='navbar__custom'>Visão</Link>
-                                <Link href="/" className='navbar__custom'>Áreas de Atuação</Link>
-                                <Link href="/publi" className='navbar__custom'>Publicações</Link>
-                                <Link href="/" className='navbar__custom'>Equipe</Link>
-                                <Link href="/" className='navbar__custom'>Privacidade</Link>
+                            {rotasApp.map((rota, index) => (<Link key={index} href={rota.path} className={`navbar__custom ${path === rota.path && 'active'}`}>{rota.label}</Link>))}                                
                             </>
                         )
                      )}

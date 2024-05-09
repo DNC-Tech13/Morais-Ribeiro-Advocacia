@@ -1,10 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link';
 import { Modal} from 'react-bootstrap'; 
 import './index.scss';
+import { rotasApp } from '@/lib/rotasApp/rotasApp';
 
 const ModalMenu = ({ showModal, handleToggleModal }) => {
-    console.log(showModal)
+    
+    const [path, setPath] = useState('');
+    useEffect(() => {
+        const pathname = window.location.pathname;
+        const anchor = window.location.hash;
+        console.log(anchor)
+        if(anchor){
+        setPath(pathname + anchor);
+        } else {
+            setPath(pathname);
+        }
+
+    },[])
+
+    const handleRedirect = () => {
+        handleToggleModal(false)
+    }
   return (
     <Modal 
     show={showModal} 
@@ -18,14 +35,7 @@ const ModalMenu = ({ showModal, handleToggleModal }) => {
         <Modal.Title><img src='logo.svg' className='navbar__logo' /></Modal.Title>       
     </Modal.Header>
     <Modal.Body>
-        <Link href="/" className='navbar__custom'>Home</Link>
-        <Link href="/" className='navbar__custom'>Sobre nós</Link>
-        <Link href="missao-visao-valores" className='navbar__custom'>Missão e valores</Link>
-        <Link href="/missao-visao-valores" className='navbar__custom'>Visão</Link>
-        <Link href="/" className='navbar__custom'>Áreas de Atuação</Link>
-        <Link href="/" className='navbar__custom'>Publicações</Link>
-        <Link href="/" className='navbar__custom'>Equipe</Link>
-        <Link href="/" className='navbar__custom'>Privacidade</Link>
+        {rotasApp.map((rota, index) => (<Link key={index} href={rota.path} className={`navbar__custom ${path === rota.path && 'active'}`} onClick={() => handleRedirect()}>{rota.label}</Link>))}        
     </Modal.Body>
     <Modal.Footer>
         <h1>Contatos</h1>

@@ -1,6 +1,10 @@
 @use "../../styles/var" as *;
 @use "../../styles/mixin" as *;
 
+.navbar__custom.active{
+    color: $dourado-pastel;
+}
+
 .close-button{
     background-color: transparent !important;
     height: 30px;
