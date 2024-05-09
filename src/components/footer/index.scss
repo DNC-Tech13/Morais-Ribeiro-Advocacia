@@ -1,108 +1,154 @@
 @use "../../styles/globals" as *;
-.footer{
-    display: flex;
-    height: 200px;
-    background-color: black;
-    font-family: Barlow;
+@use "../../styles/mixin" as *;
 
-    img{
-        margin-left: 5px;
-    }
 
-    &__container{
-        display: flex;
+@include queryDesktop{
+    .footer__telefone a {
+        text-decoration: none;
         color: white;
-        margin-left: 5px;
-        gap: 100px;
+      }
+    .footer{
+        align-items: center;
+        justify-content: space-between;
+        color: white;
+        height: 200px;
+        background-color: black;
+        font-family: Barlow;
+        
+        &__container{
+            @include container-Desktop;
+           display: flex;
+           text-decoration: none;
+           gap: 50px;
+           align-items: center;
 
+           
 
-        .rectangle {
-            margin-top: 25px;
-            margin-bottom: 25px;
+            &__endereco,
+            &__contato{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                
+                h4{
+                    text-decoration: none;
+                    color: white;
+                        font-size: 16px;                    
+                }
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+                
+            }
+            
+            
+           
+           .rectangle {
             height: 150px;
             width: 2px;
             background-color: white;
         }
+        }
+    }
+}
+        
+@include queryTablet{
+    .footer__telefone a {
+        text-decoration: none;
+        color: white;
+      }
+    .footer{
+        align-items: center;
+        justify-content: space-between;
+        color: white;
+        height: 200px;
+        background-color: black;
+        font-family: Barlow;
+        
+        &__container{
+            @include container-Desktop;
+           display: flex;
+           text-decoration: none;
+           gap: 50px;
+           align-items: center;
 
-        h4{
-            font-size: 16px;
+           
+
+            &__endereco,
+            &__contato{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                
+                h4{
+                    text-decoration: none;
+                    color: white;
+                    
+                }
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+                
+            }
             
+            
+           
+           .rectangle {
+            height: 150px;
+            width: 2px;
+            background-color: white;
         }
-
-        a{
-            text-decoration: none;
-            color: white;
-        }
-
-    }
-}
-
-@media screen and (max-width: 768px){
-    .footer{
-        
-        height: 100px;
-        
-        img{
-            display: none;
-        }
-
-        &__container{
-            display: flex;
-            color: white;
-            margin-left: 5px;
-            gap: 20px;
-
-            .rectangle {
-                margin-top: 5px;
-                margin-bottom: 5px;
-                height: 90px;
-                width: 2px;
-                background-color: white;
-            }
-
-            p{
-                font-size: 10px;
-            }
-            h4{
-                font-size: 8px;
-                
-            }
         }
     }
 }
+           
+@media screen and (max-width: 711px) {
+    .footer__telefone a {
+      text-decoration: none;
+      color: white;
+    }
+    .footer__logo {
+        display: none; // Oculta a imagem do logo
+      }
 
-@media (min-width: 768px) and (max-width: 1050px) {
-    .footer{
-        justify-content: space-around;
-        height: 150px;
-        
-        &__logo{
-            width: 50%;
+    .footer__contato h4{
+        font-size: 9px;
+    }
+    .footer__endereco h4{
+        font-size: 8px;
+    }
+    
+    .footer {
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+      height: 200px;
+      background-color: black;
+      font-family: Barlow;
+  
+      &__container {
+        @include container-Mobile;
+        display: flex;
+        text-decoration: none;
+        gap: 10px;
+        align-items: center;
+  
+        &__endereco,
+        &__contato {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
         }
-
-        &__container{
-            display: flex;
-            color: white;
-            margin-left: 5px;
-            gap: 20px;
-
-            .rectangle {
-                margin-top: 15px;
-                margin-bottom: 15px;
-                height: 120px;
-                width: 2px;
-                background-color: white;
-            }
-            img{
-
-            }
-            p{
-                font-size: 8px;
-            }
-            h4{
-                font-size: 8px;
-                
-            }
+  
+        .rectangle {
+          height: 150px;
+          width: 2px;
+          background-color: white;
         }
-    }    
-}   
+      }
+    }
+  }
