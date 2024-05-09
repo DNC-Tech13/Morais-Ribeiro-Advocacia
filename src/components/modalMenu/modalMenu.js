@@ -3,20 +3,17 @@ import Link from 'next/link';
 import { Modal} from 'react-bootstrap'; 
 import './index.scss';
 import { rotasApp } from '@/lib/rotasApp/rotasApp';
+import { getPath } from '@/lib/getPath';
 
 const ModalMenu = ({ showModal, handleToggleModal }) => {
-    
     const [path, setPath] = useState('');
-    useEffect(() => {
-        const pathname = window.location.pathname;
-        const anchor = window.location.hash;
-        console.log(anchor)
+    const { anchor, pathname } = getPath();
+    useEffect(() => {        
         if(anchor){
         setPath(pathname + anchor);
         } else {
             setPath(pathname);
         }
-
     },[])
 
     const handleRedirect = () => {

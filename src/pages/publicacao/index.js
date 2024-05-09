@@ -52,3 +52,5 @@ const publi = () => {
     </>
   );
 };
+
+export default publi;

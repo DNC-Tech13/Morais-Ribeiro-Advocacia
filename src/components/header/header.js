@@ -3,30 +3,30 @@ import './index.scss';
 import Link from 'next/link';
 import ModalMenu from '../modalMenu/modalMenu';
 import { rotasApp } from '@/lib/rotasApp/rotasApp';
+import { getPath } from '@/lib/getPath';
+import { getScreenSize } from '@/lib/getScreensize';
 
 const Header = ({ isMobileProp, showModalProp, handleToggleModalProp, renderLinksProp }) => {
     const [isMobile, setIsMobile] = useState(isMobileProp);
     const [showModal, setShowModal] = useState(showModalProp);
     const [renderLinks, setRenderLinks] = useState(renderLinksProp);
-    const [path, setPath] = useState('');
-    const pathname = window.location.pathname;
-    const anchor = window.location.hash;
+    const [path, setPath] = useState('');    
+    const { anchor, pathname } = getPath();
 
-    // Memoiza a função checkIsMobile para evitar demora de reload
-    const checkIsMobile = useMemo(() => () => {
-        const mediaQuery = window.matchMedia('(max-width:1099px)');
-        setIsMobile(mediaQuery.matches);
-        setRenderLinks(true);
-    }, []);
+
 
     useEffect(() => {
-        checkIsMobile(); // Chamada inicial para definir o estado ao montar o componente
-        window.addEventListener('resize', checkIsMobile);
-        
-
-        return () => {
-            window.removeEventListener('resize', checkIsMobile);
-        };
+        const { width } = getScreenSize();
+        setIsMobile(width < 1100);
+        setRenderLinks(width >= 1100)
+        window.addEventListener("resize", () => {
+        const { width } = getScreenSize();
+        setIsMobile(width < 1100);
+        setRenderLinks(width >= 1100)
+    });
+    return () => {
+      window.removeEventListener("resize", () => {});
+    };
     }, []);
 
     useEffect(() => {        
