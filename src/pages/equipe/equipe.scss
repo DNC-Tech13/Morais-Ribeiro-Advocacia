@@ -1,0 +1,70 @@
+@use "../../styles/var" as *;
+@use "../../styles/mixin" as mix;
+
+.banner_equipe-content-wrapper {
+  height: 100%;
+  width: 100%;
+  color: $branco-suave;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  span {
+    @include mix.BodyB;
+  }
+  h1 {
+    @include mix.TituloL;
+    line-height: 1;
+  }
+  h2 {
+    @include mix.BodyR;
+    font-weight: 300;
+  }
+}
+.equipe_container{
+  @include mix.container-Mobile;
+  display: flex;
+  flex-direction: column;
+  row-gap: 22px
+
+}
+.equipe_sect{
+  background-color: $branco-suave;
+  padding: 48px 0;
+}
+
+
+
+@include mix.queryTablet {
+  .banner_equipe-content-wrapper {
+    span {
+      @include mix.TituloL;
+    }
+    h1 {
+      @include mix.TituloXL;
+    }
+    h2 {
+      @include mix.TituloX;
+    }
+  }
+
+  .equipe_container{
+    @include mix.container-Tablet;
+    row-gap: 48px
+  }
+
+  .equipe_sect{
+    padding: 68px 0;
+  }
+  
+}
+
+@include mix.queryDesktop {
+  .equipe_container{
+    @include mix.container-Desktop;
+    row-gap: 60px
+  }
+  .equipe_sect{
+    padding: 120px 0;
+  }
+  
+}

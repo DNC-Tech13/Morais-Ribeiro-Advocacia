@@ -1,0 +1,45 @@
+@use "@/styles/_mixin.scss" as mix;
+.hero-container {
+  @include mix.container-Mobile;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 72px;
+}
+%backgroundRender {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero-sect-full {
+  @extend %backgroundRender;
+  height: 85.3515625vh;
+  width: 100%;
+}
+.hero-sect-half {
+  @extend %backgroundRender;
+  height: 30vh;
+  width: 100%;
+}
+@include mix.queryTablet {
+  .hero-container {
+    @include mix.container-Tablet;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-sect-half {
+    height: 50vh;
+  }
+}
+@include mix.queryDesktop {
+  .hero-container {
+    @include mix.container-Desktop;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 4px;
+    align-items: center;
+    row-gap: auto;
+  }
+}

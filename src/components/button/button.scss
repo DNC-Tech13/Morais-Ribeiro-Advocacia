@@ -1,0 +1,37 @@
+@use '../../styles/mixin' as mix;
+@use '../../styles/var' as *;
+
+.buttonCustom_wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.buttonCustom{
+  width: 217px;
+  height: 57px;
+  width: fit-content;
+  padding: 12px 24px;
+  border-radius: 50px;
+  border:none;
+  cursor: pointer;
+
+  
+  @include mix.BodyB;
+  font-weight: 700;
+  
+  &.light{
+    color: $cinza-medio;
+    background-color: $branco-suave;
+  }
+  &.dark{
+    color: $branco-suave;
+    background-color: $preto;
+  }
+}
+
+@include mix.queryTablet{
+.buttonCustom{
+  @include mix.TituloS;
+}
+}

@@ -1,0 +1,52 @@
+{
+  "equipe": [
+    {
+      "imgUrl": "/images/cardEquipe/gustavo.png",
+      "nome": "Dr. Gustavo Santos Ribeiro",
+      "cargo": "Sócio",
+      "areasAtuacao": [
+        "Direito do Consumidor",
+        "Direito Civil"
+      ],
+      "location": "São Paulo",
+      "locationLabel": "São Paulo",
+      "phoneNumber": "12991604267",
+      "phoneLabel": "(12) 99160-4267",
+      "emailAdress": "moraisribeiroadvjur@gmail.com",
+      "linkedinUrl": "https://www.linkedin.com/in/gustavo-santos-ribeiro-31b652196/",
+      "linkedinLabel": "in/gustavo-santos-ribeiro-31b652196/"
+    },
+    {
+      "imgUrl": "/images/cardEquipe/joao.png",
+      "nome": "Dr. João Pedro Ribeiro",
+      "cargo": "Sócio",
+      "areasAtuacao": [
+        "Direito Trabalhista",
+        "LGPD"
+      ],
+      "location": "São Paulo",
+      "locationLabel": "São Paulo",
+      "phoneNumber": "12991604267",
+      "phoneLabel": "(12) 99160-4267",
+      "emailAdress": "moraisribeiroadvjur@gmail.com",
+      "linkedinUrl": "https://www.linkedin.com/in/joaopedrorrmoliveira",
+      "linkedinLabel": "in/joaopedrorrmoliveira"
+    },
+    {
+      "imgUrl": "/images/cardEquipe/nikolly.png",
+      "nome": "Dra. Nikolly Karoline Morais e Silva",
+      "cargo": "Sócio",
+      "areasAtuacao": [
+        "Direito Tributário",
+        "Direito Civil"
+      ],
+      "location": "São Paulo",
+      "locationLabel": "São Paulo",
+      "phoneNumber": "12991604267",
+      "phoneLabel": "(12) 99160-4267",
+      "emailAdress": "moraisribeiroadvjur@gmail.com",
+      "linkedinUrl": "https://www.linkedin.com/in/nikollymorais",
+      "linkedinLabel": "in/nikollymorais"
+    }
+  ]
+}

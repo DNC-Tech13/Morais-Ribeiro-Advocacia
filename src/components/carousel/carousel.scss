@@ -1,0 +1,32 @@
+@use '@/styles/_mixin.scss' as mix;
+
+%wrap-carousel{
+  height: 100%;
+  width: 100%;
+  max-width: 420px;
+  max-height: 370px;
+}
+
+.carousel-wrap{
+  display: flex;
+  justify-content: center;
+  row-gap: 24px;
+  @extend %wrap-carousel;
+}
+
+.carousel-img{  
+  @extend %wrap-carousel;
+}
+
+@include mix.queryTablet {
+  %wrap-carousel{
+    max-width: 542.37px;
+    max-height: 500px;
+  }
+}
+@include mix.queryDesktop {
+  %wrap-carousel{
+    max-width: 640px;
+    max-height: 590px;
+  }
+}
