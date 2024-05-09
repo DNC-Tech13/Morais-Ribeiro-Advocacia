@@ -2,7 +2,6 @@ import React, { useEffect, useState, useMemo } from 'react';
 import './index.scss';
 import Link from 'next/link';
 import ModalMenu from '../modalMenu/modalMenu';
-import { rotasApp } from '@/lib/rotasApp/rotasApp';
 
 const Header = ({ isMobileProp, showModalProp, handleToggleModalProp, renderLinksProp }) => {
     const [isMobile, setIsMobile] = useState(isMobileProp);
