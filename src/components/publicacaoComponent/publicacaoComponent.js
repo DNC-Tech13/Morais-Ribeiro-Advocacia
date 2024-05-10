@@ -30,8 +30,8 @@ const PublicacaoComponent = ({ autorInfo, publicacaoInfo }) => {
           </div>
           <div className='public__section1'>
             <div className='public__section2'>
-              <a href={continuarLendo}>continuar lendo</a>
-              <span>{data}</span>
+              <div><a href={continuarLendo}>continuar lendo</a></div>
+              <div><span>{data}</span></div>              
             </div>
           </div>
         </div>

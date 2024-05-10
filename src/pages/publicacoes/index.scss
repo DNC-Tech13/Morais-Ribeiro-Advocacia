@@ -2,91 +2,231 @@
 @use "../../styles/mixin" as *;
 @use ".././../styles/globals.scss" as *;
 
-
-@include queryDesktop{
-    
-    .view{
+@media screen and (max-width: 711px) {
+    .view {
         font-family: Bralow;
         display: flex;
         flex-direction: column;
-        gap: 50px;
-
-        &__search{
-            .view__Info{
-                display: flex;
-                justify-content: space-between;
-                margin: 0px 50px;
-        
-                h1{
-                    font-size: 30px;
-                    font-weight: 700;
-                }
-        
-                button{
-                    border-radius: 50px;
-                    color: $branco;
-                    width: 217px;
-                    height: 57px;
-                    font-size: 22px;
-                    background-color: $preto;
-                }
-        
-                button:hover{
-                    transform: translateY(-3px);
-                    transition-duration: 0.3s;
-                    background-color: $cinza-escuro;
-                    color: $mostarda;
-                }
-            }
-        
-            .view__filter{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                margin: 10px 130px 0px 150px;
-                
-                .view__a{
-                    width: 800px;
-                    height: 62px;
-                    border-radius: 60px;
-                    font-size: 25px;
-                    padding-left: 40px;
-                }
-                .view__b{
-                    width: 267px;
-                    height: 62px;
-                    border-radius: 60px;
-                    font-size: 25px;
-                    padding-left: 35px;
-                }
-            }
-        }
-        
-        &__Banner{
-            background-image: url(../../../public/bannerPublicacao.svg);
-            width: 100%;
-            height: 512px;
-            color: white;
+        gap: 30px;
+    
+        &__search {
+          .view__Info {
             display: flex;
-            align-items: center;
-            
-
-            h1{
-                font-size: 38px;
-                font-weight: 700;
-                margin-left: 140px;
+            justify-content: space-between;
+            margin: 0px 30px;
+    
+            h1 {
+              font-size: 27px;
+              font-weight: 700;
             }
-        } 
-
-        
-
-        &__container{
+    
+            button {
+              display: none;
+            }
+          }
+    
+          .view__filter {
             display: flex;
             flex-direction: column;
-            justify-content: right;
-            gap: 50px;
+            margin: 10px 10px 0px 10px;
+            gap: 20px;
+    
+            .view__a {
+              width: 370px;
+              height: 58px;
+              border-radius: 60px;
+              font-size: 25px;
+              padding-left: 40px;
+            }
+            .view__b {
+              width: 267px;
+              height: 62px;
+              border-radius: 60px;
+              font-size: 25px;
+              padding-left: 35px;
+            }
+          }
         }
-    }
     
+        &__Banner {
+          background-image: url(../../../public/bannerPublicacao.svg);
+          width: 100%;
+          height: 512px;
+          color: white;
+          display: flex;
+          align-items: center;
     
+          h1 {
+            font-size: 38px;
+            font-weight: 700;
+            margin-left: 140px;
+          }
+        }
+    
+        &__container {
+          display: flex;
+          flex-direction: column;
+          justify-content: right;
+          gap: 20px;
+          margin-left: -50px;
+        }
+      }   
 }
+
+
+
+@include queryTablet {
+    .view {
+      
+      font-family: Bralow;
+      display: flex;
+      flex-direction: column;
+      gap: 70px;
+  
+      &__search {
+        .view__Info {
+          display: flex;
+          justify-content: space-between;
+          margin: 0px 50px;
+  
+          h1 {
+            font-size: 30px;
+            font-weight: 700;
+          }
+  
+          button {
+            display: none; /* Botão oculto em tablet */
+          }
+        }
+  
+        .view__filter {
+          display: flex;
+          flex-direction: column;
+          margin: 10px 10px 0px 10px;
+          gap: 30px;
+  
+          .view__a {
+            width: 800px;
+            height: 62px;
+            border-radius: 60px;
+            font-size: 25px;
+            padding-left: 40px;
+          }
+          .view__b {
+            width: 267px;
+            height: 62px;
+            border-radius: 60px;
+            font-size: 25px;
+            padding-left: 35px;
+          }
+        }
+      }
+  
+      &__Banner {
+        background-image: url(../../../public/bannerPublicacao.svg);
+        width: 100%;
+        height: 512px;
+        color: white;
+        display: flex;
+        align-items: center;
+  
+        h1 {
+          font-size: 38px;
+          font-weight: 700;
+          margin-left: 140px;
+        }
+      }
+  
+      &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+        width: 110%;
+        gap: 50px;
+      }
+    }
+  }
+
+@include queryDesktop {
+  .view {
+    font-family: Bralow;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+
+    &__search {
+      .view__Info {
+        display: flex block;
+        justify-content: space-between;
+        margin: 0px 50px;
+
+        h1 {
+          font-size: 30px;
+          font-weight: 700;
+        }
+
+        button {
+          border-radius: 50px;
+          color: $branco;
+          width: 217px;
+          height: 57px;
+          font-size: 22px;
+          background-color: $preto;
+          display: block !important; 
+        }
+
+        button:hover {
+          transform: translateY(-3px);
+          transition-duration: 0.3s;
+          background-color: $cinza-escuro;
+          color: $mostarda;
+        }
+      }
+
+      .view__filter {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 10px 130px 0px 150px;
+
+        .view__a {
+          width: 800px;
+          height: 62px;
+          border-radius: 60px;
+          font-size: 25px;
+          padding-left: 40px;
+        }
+        .view__b {
+          width: 267px;
+          height: 62px;
+          border-radius: 60px;
+          font-size: 25px;
+          padding-left: 35px;
+        }
+      }
+    }
+
+    &__Banner {
+      background-image: url(../../../public/bannerPublicacao.svg);
+      width: 100%;
+      height: 512px;
+      color: white;
+      display: flex;
+      align-items: center;
+
+      h1 {
+        font-size: 38px;
+        font-weight: 700;
+        margin-left: 140px;
+      }
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      width: 110%;
+    }
+  }
+}
+
+
