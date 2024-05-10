@@ -1,0 +1,39 @@
+@use "../../styles/var" as *;
+@use "../../styles/mixin" as *;
+@use ".././../styles/globals.scss" as *;
+
+
+@include queryDesktop{
+    .view__Header h1{
+        font-size: 32px;
+    }
+    .view{
+        font-family: Bralow;
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        
+        &__Banner{
+            background-image: url(../../../public/bannerPublicacao.svg);
+            width: 100%;
+            height: 512px;
+            color: white;
+            display: flex;
+            align-items: center;
+            
+
+            h1{
+                margin-left: 140px;
+            }
+        } 
+
+        &__container{
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            gap: 50px;
+        }
+    }
+    
+    
+}
