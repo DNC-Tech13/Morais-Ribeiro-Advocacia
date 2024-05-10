@@ -1,10 +1,11 @@
-
+import React, { useState } from 'react';
 import PublicacaoComponent from "@/components/publicacaoComponent/publicacaoComponent";
-import Header from "@/components/header/header";
 import Layout from "@/components/layout/DefaultLayout";
 import "./index.scss"
 
-const publi = () => {
+const Publi = () => {
+  const [autorFiltro, setAutorFiltro] = useState('');
+
   const autor1Info = {
     nome:'Dr. João Pedro\nRezende Ribeiro\ne Moraes de Oliveira',
     foto:'fotocontainerjoao.svg',
@@ -30,6 +31,14 @@ const publi = () => {
     data:'01 de abril de 2024',
   };
 
+  // Lista de autores
+  const autores = [autor1Info, autor2Info];
+
+  // Filtra os autores com base no estado autorFiltro
+  const filteredAutores = autores.filter((autor) =>
+    autor.nome.toLowerCase().includes(autorFiltro.toLowerCase())
+  );
+
   return (
     <>
     <Layout>
@@ -38,18 +47,36 @@ const publi = () => {
           <h1>Publicações</h1>
         </div>
         <div className="view__search">
-          <div className="view__info">
-            <h1>Artigos</h1>
-            <button>Entre em contato</button>
+          <div className="view__Info">
+              <h1><b>Artigos</b></h1>
+              <button>Entre em contato</button>            
           </div>
           <div className="view__filter">
-            <input type="text" placeholder="Pesquisar Artigo"/>
-            <input type="text" placeholder="Filtrar por Autor"/>
+            <input type="text" placeholder="Pesquisar Artigo" className="view__a"/>
+            <input 
+              type="text"
+              placeholder="Filtrar por Autor"
+              className="view__b"
+              value={autorFiltro}
+              onChange={(e) => setAutorFiltro(e.target.value)}
+            />
           </div>
         </div>
         <div className="view__container">
-          <PublicacaoComponent className="publicacao__component" autorInfo={autor1Info} publicacaoInfo={publicacao1Info} />
-          <PublicacaoComponent className="publicacao__component" autorInfo={autor2Info} publicacaoInfo={publicacao2Info} />
+          {/* Mostra uma mensagem para caso não localize nenhum autor*/}
+          {autorFiltro && filteredAutores.length === 0 && (
+            <p>Nenhum autor encontrado com o filtro "{autorFiltro}"</p>
+          )}
+
+          {/* Renderiza o autor filtrado */}
+          {filteredAutores.map((autor) => (
+            <PublicacaoComponent
+              key={autor.nome}
+              className="publicacao__component"
+              autorInfo={autor}
+              publicacaoInfo={publicacao1Info}
+            />
+          ))}
         </div>
       </main>
     </Layout>
@@ -57,4 +84,4 @@ const publi = () => {
   );
 };
 
-export default publi;
+export default Publi;

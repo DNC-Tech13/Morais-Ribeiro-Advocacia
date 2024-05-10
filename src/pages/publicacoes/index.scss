@@ -4,14 +4,63 @@
 
 
 @include queryDesktop{
-    .view__Header h1{
-        font-size: 32px;
-    }
+    
     .view{
         font-family: Bralow;
         display: flex;
         flex-direction: column;
-        gap: 100px;
+        gap: 50px;
+
+        &__search{
+            .view__Info{
+                display: flex;
+                justify-content: space-between;
+                margin: 0px 50px;
+        
+                h1{
+                    font-size: 30px;
+                    font-weight: 700;
+                }
+        
+                button{
+                    border-radius: 50px;
+                    color: $branco;
+                    width: 217px;
+                    height: 57px;
+                    font-size: 22px;
+                    background-color: $preto;
+                }
+        
+                button:hover{
+                    transform: translateY(-3px);
+                    transition-duration: 0.3s;
+                    background-color: $cinza-escuro;
+                    color: $mostarda;
+                }
+            }
+        
+            .view__filter{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin: 10px 130px 0px 150px;
+                
+                .view__a{
+                    width: 800px;
+                    height: 62px;
+                    border-radius: 60px;
+                    font-size: 25px;
+                    padding-left: 40px;
+                }
+                .view__b{
+                    width: 267px;
+                    height: 62px;
+                    border-radius: 60px;
+                    font-size: 25px;
+                    padding-left: 35px;
+                }
+            }
+        }
         
         &__Banner{
             background-image: url(../../../public/bannerPublicacao.svg);
@@ -23,9 +72,13 @@
             
 
             h1{
+                font-size: 38px;
+                font-weight: 700;
                 margin-left: 140px;
             }
         } 
+
+        
 
         &__container{
             display: flex;
