@@ -16,7 +16,7 @@ const publi = () => {
   
   const publicacao1Info ={
     titulo:'PJ ou CLT: Avaliando Vantagens e Desvantagens',
-    resumo:'A decisão entre trabalhar como Pessoa Jurídica (PJ) ou sob a forma da  Consolidação das Leis do \nTrabalho (CLT) é crucial e deve ser  cuidadosamente ponderada, levando em consideração diversos \naspectos.',
+    resumo:'A decisão entre trabalhar como Pessoa Jurídica (PJ) ou sob a forma da  Consolidação das Leis do Trabalho (CLT) é crucial e deve ser  cuidadosamente ponderada, levando em consideração diversos aspectos.',
     continuarLendo:'inserir o link do artigo',
     data:'09 de abril de 2024',
   };
