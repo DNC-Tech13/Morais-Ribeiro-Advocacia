@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Banner from "@/components/banner/banner";
 import Layout from "@/components/layout/DefaultLayout";
 import { getScreenSize } from "@/lib/getScreensize";
-import ButtonCustomLink from "@/components/button/button";
+import ButtonCustomForm from "@/components/button/button";
 import { CardAtuacao } from '@/components/cardAreaAtuacao/CardAtuacao';
 import { fetchAreas } from '@/lib/getAerasAtuacao';
 
@@ -60,9 +60,9 @@ export default function AreasAtuacao() {
           <div className={"atuacao-sect2_container"}>
             <h3>Atendemos toda e qualquer demanda de natureza jurídica, nos  destacando pela maneira objetiva, correta , moderna e eficaz que adotamos  para assessorar nossos clientes a solucionar problemas.</h3>
 
-            <ButtonCustomLink variant="dark" position={screenSize<768?'center':'right'}>
+            <ButtonCustomForm variant="dark" position={screenSize<768?'center':'right'}>
               Entre em contato
-            </ButtonCustomLink>
+            </ButtonCustomForm>
             <div className={"atuacao-sect2_grid"} >
               {data && data.map((area, index) => (
                 <CardAtuacao
