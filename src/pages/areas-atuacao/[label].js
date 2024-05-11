@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react'
 
 import './atuacaopage.scss'
-import ButtonCustomLink from '@/components/button/button';
+import ButtonCustomForm from '@/components/button/button';
 
 const AreaAtuacaoVisualizar = () => {
   const {label} = useRouter().query;
@@ -49,9 +49,9 @@ const AreaAtuacaoVisualizar = () => {
               </div>
             ))}
 
-          <ButtonCustomLink variant={'dark'} position={'right'}>
+          <ButtonCustomForm variant={'dark'} position={'right'}>
                 Entre em contato
-              </ButtonCustomLink>
+              </ButtonCustomForm>
           </div>
         </section>
       </main>

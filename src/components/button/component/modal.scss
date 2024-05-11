@@ -1,0 +1,66 @@
+@use '../../../styles/mixin' as mix;
+@use '../../../styles/var' as *;
+
+.formModal-backdrop{
+  background-color: rgba(0,0,0,0.4);
+
+}
+.formModal-content{
+  background-color: transparent !important;
+  border: none;
+  width: 100%;
+  height: auto;
+  margin:0 auto;
+}
+.formModal-dialog{
+  background-color: transparent !important;
+  padding: 0;
+  height: 100vh;
+  width: auto;
+  margin:0 auto;
+}
+.formModal-body{
+  padding: 24px 18px;
+  margin: 0 auto;
+  background-color: $branco-suave;
+  border-radius: 24px;
+  height: 100% !important;
+  max-height: 978px !important;
+  width: 100% !important;
+  max-width: 768px !important;
+
+  h3{
+    @include mix.TituloL;
+    color: $cinza-escuro;
+    margin-bottom: 24px;
+  }
+
+  label{
+    @include mix.TituloS;
+    color: $cinza-escuro;
+    margin-bottom: 8px;
+  }
+  input, select{
+    padding-left: 15px;
+    @include mix.BodyR;    
+  }
+  select{
+    max-height: 100px;
+    overflow-y: auto;
+  }
+  button{
+    margin: 24px 0;
+    @include mix.TituloS;
+    color: $branco-suave;
+    background-color: $cinza-escuro;
+    border: none;
+
+    &:hover{
+      background-color: $cinza-medio;
+    }
+  }
+
+  .invalid-feedback{
+    font-size: 12px;
+  }
+}
